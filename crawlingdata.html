@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>&lt;no title&gt; &#8212; My sample book</title>
+    <title>Crawling Data &#8212; My sample book</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -115,7 +115,12 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Crawling Data
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="markdown.html">
    Markdown Files
@@ -315,50 +320,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1><no title></h1>
+                <h1>Crawling Data</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -366,7 +344,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="cell docutils container">
+  <section class="tex2jax_ignore mathjax_ignore" id="crawling-data">
+<h1>Crawling Data<a class="headerlink" href="#crawling-data" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git clone --depth<span class="o">=</span><span class="m">1</span> https://github.com/twintproject/twint.git
 <span class="o">%</span><span class="k">cd</span> twint
@@ -395,26 +375,26 @@ Requirement already satisfied: schedule in /usr/local/lib/python3.7/dist-package
 Requirement already satisfied: geopy in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 11)) (1.17.0)
 Requirement already satisfied: fake-useragent in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 12)) (0.1.11)
 Requirement already satisfied: googletransx in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 13)) (2.4.2)
-Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.7/dist-packages (from pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (2022.4)
 Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.7/dist-packages (from pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (2.8.2)
+Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.7/dist-packages (from pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (2022.4)
 Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.7/dist-packages (from pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (1.21.6)
 Requirement already satisfied: attrs&gt;=19.2.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp_socks&lt;=0.4.1-&gt;-r requirements.txt (line 9)) (21.4.0)
-Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (6.0.2)
+Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (1.8.1)
 Requirement already satisfied: chardet&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (3.0.4)
 Requirement already satisfied: async-timeout&lt;4.0,&gt;=3.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (3.0.1)
-Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (1.8.1)
+Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (6.0.2)
 Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.7/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (1.15.0)
 Requirement already satisfied: typing-extensions&gt;=3.7.4 in /usr/local/lib/python3.7/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;-r requirements.txt (line 1)) (4.1.1)
 Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.7/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;-r requirements.txt (line 1)) (2.10)
 Requirement already satisfied: pycares&gt;=4.0.0 in /usr/local/lib/python3.7/dist-packages (from aiodns-&gt;-r requirements.txt (line 2)) (4.2.2)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: cffi&gt;=1.5.0 in /usr/local/lib/python3.7/dist-packages (from pycares&gt;=4.0.0-&gt;aiodns-&gt;-r requirements.txt (line 2)) (1.15.1)
+Requirement already satisfied: cffi&gt;=1.5.0 in /usr/local/lib/python3.7/dist-packages (from pycares&gt;=4.0.0-&gt;aiodns-&gt;-r requirements.txt (line 2)) (1.15.1)
 Requirement already satisfied: pycparser in /usr/local/lib/python3.7/dist-packages (from cffi&gt;=1.5.0-&gt;pycares&gt;=4.0.0-&gt;aiodns-&gt;-r requirements.txt (line 2)) (2.21)
 Requirement already satisfied: elastic-transport&lt;9,&gt;=8 in /usr/local/lib/python3.7/dist-packages (from elasticsearch-&gt;-r requirements.txt (line 6)) (8.4.0)
-Requirement already satisfied: urllib3&lt;2,&gt;=1.26.2 in /usr/local/lib/python3.7/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;-r requirements.txt (line 6)) (1.26.12)
 Requirement already satisfied: certifi in /usr/local/lib/python3.7/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;-r requirements.txt (line 6)) (2022.9.24)
-Requirement already satisfied: geographiclib&lt;2,&gt;=1.49 in /usr/local/lib/python3.7/dist-packages (from geopy-&gt;-r requirements.txt (line 11)) (1.52)
+Requirement already satisfied: urllib3&lt;2,&gt;=1.26.2 in /usr/local/lib/python3.7/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;-r requirements.txt (line 6)) (1.26.12)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: geographiclib&lt;2,&gt;=1.49 in /usr/local/lib/python3.7/dist-packages (from geopy-&gt;-r requirements.txt (line 11)) (1.52)
 Requirement already satisfied: requests in /usr/local/lib/python3.7/dist-packages (from googletransx-&gt;-r requirements.txt (line 13)) (2.28.1)
 Requirement already satisfied: charset-normalizer&lt;3,&gt;=2 in /usr/local/lib/python3.7/dist-packages (from requests-&gt;googletransx-&gt;-r requirements.txt (line 13)) (2.1.1)
 </pre></div>
@@ -444,12 +424,12 @@ Requirement already satisfied: nest-asyncio in /usr/local/lib/python3.7/dist-pac
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Requirement already satisfied: aiohttp==3.7.0 in /usr/local/lib/python3.7/dist-packages (3.7.0)
 Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.7/dist-packages (from aiohttp==3.7.0) (6.0.2)
+Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp==3.7.0) (1.8.1)
 Requirement already satisfied: async-timeout&lt;4.0,&gt;=3.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp==3.7.0) (3.0.1)
 Requirement already satisfied: chardet&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp==3.7.0) (3.0.4)
-Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp==3.7.0) (1.8.1)
 Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp==3.7.0) (21.4.0)
-Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.7/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp==3.7.0) (2.10)
 Requirement already satisfied: typing-extensions&gt;=3.7.4 in /usr/local/lib/python3.7/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp==3.7.0) (4.1.1)
+Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.7/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp==3.7.0) (2.10)
 </pre></div>
 </div>
 </div>
@@ -622,9 +602,9 @@ Name: tweet, dtype: object
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Requirement already satisfied: pandas in /usr/local/lib/python3.7/dist-packages (1.3.5)
+Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.7/dist-packages (from pandas) (2022.4)
 Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.7/dist-packages (from pandas) (1.21.6)
 Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.7/dist-packages (from pandas) (2.8.2)
-Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.7/dist-packages (from pandas) (2022.4)
 Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.7/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas) (1.15.0)
 </pre></div>
 </div>
@@ -657,7 +637,7 @@ Requirement already satisfied: numpy in /usr/local/lib/python3.7/dist-packages (
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-eb68840a-5958-4b6c-825c-7db382d72305">
+  <div id="df-44e6d680-097f-4211-bd34-eb1d90aa5ff1">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -985,7 +965,7 @@ Requirement already satisfied: numpy in /usr/local/lib/python3.7/dist-packages (
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-eb68840a-5958-4b6c-825c-7db382d72305')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-44e6d680-097f-4211-bd34-eb1d90aa5ff1')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1036,12 +1016,12 @@ Requirement already satisfied: numpy in /usr/local/lib/python3.7/dist-packages (
 
       <script>
         const buttonEl =
-          document.querySelector('#df-eb68840a-5958-4b6c-825c-7db382d72305 button.colab-df-convert');
+          document.querySelector('#df-44e6d680-097f-4211-bd34-eb1d90aa5ff1 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-eb68840a-5958-4b6c-825c-7db382d72305');
+          const element = document.querySelector('#df-44e6d680-097f-4211-bd34-eb1d90aa5ff1');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1086,74 +1066,74 @@ Requirement already satisfied: sastrawi in /usr/local/lib/python3.7/dist-package
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Requirement already satisfied: swifter in /usr/local/lib/python3.7/dist-packages (1.3.4)
-Requirement already satisfied: psutil&gt;=5.6.6 in /usr/local/lib/python3.7/dist-packages (from swifter) (5.9.2)
 Requirement already satisfied: tqdm&gt;=4.33.0 in /usr/local/lib/python3.7/dist-packages (from swifter) (4.64.1)
-Requirement already satisfied: dask[dataframe]&gt;=2.10.0 in /usr/local/lib/python3.7/dist-packages (from swifter) (2022.2.0)
-Requirement already satisfied: parso&gt;0.4.0 in /usr/local/lib/python3.7/dist-packages (from swifter) (0.8.3)
-Requirement already satisfied: ipywidgets&gt;=7.0.0 in /usr/local/lib/python3.7/dist-packages (from swifter) (7.7.1)
-Requirement already satisfied: pandas&gt;=1.0.0 in /usr/local/lib/python3.7/dist-packages (from swifter) (1.3.5)
 Requirement already satisfied: bleach&gt;=3.1.1 in /usr/local/lib/python3.7/dist-packages (from swifter) (5.0.1)
+Requirement already satisfied: pandas&gt;=1.0.0 in /usr/local/lib/python3.7/dist-packages (from swifter) (1.3.5)
+Requirement already satisfied: dask[dataframe]&gt;=2.10.0 in /usr/local/lib/python3.7/dist-packages (from swifter) (2022.2.0)
 Requirement already satisfied: cloudpickle&gt;=0.2.2 in /usr/local/lib/python3.7/dist-packages (from swifter) (1.5.0)
-Requirement already satisfied: webencodings in /usr/local/lib/python3.7/dist-packages (from bleach&gt;=3.1.1-&gt;swifter) (0.5.1)
+Requirement already satisfied: ipywidgets&gt;=7.0.0 in /usr/local/lib/python3.7/dist-packages (from swifter) (7.7.1)
+Requirement already satisfied: parso&gt;0.4.0 in /usr/local/lib/python3.7/dist-packages (from swifter) (0.8.3)
+Requirement already satisfied: psutil&gt;=5.6.6 in /usr/local/lib/python3.7/dist-packages (from swifter) (5.9.2)
 Requirement already satisfied: six&gt;=1.9.0 in /usr/local/lib/python3.7/dist-packages (from bleach&gt;=3.1.1-&gt;swifter) (1.15.0)
-Requirement already satisfied: packaging&gt;=20.0 in /usr/local/lib/python3.7/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (21.3)
-Requirement already satisfied: fsspec&gt;=0.6.0 in /usr/local/lib/python3.7/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (2022.8.2)
+Requirement already satisfied: webencodings in /usr/local/lib/python3.7/dist-packages (from bleach&gt;=3.1.1-&gt;swifter) (0.5.1)
 Requirement already satisfied: toolz&gt;=0.8.2 in /usr/local/lib/python3.7/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (0.12.0)
 Requirement already satisfied: pyyaml&gt;=5.3.1 in /usr/local/lib/python3.7/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (6.0)
 Requirement already satisfied: partd&gt;=0.3.10 in /usr/local/lib/python3.7/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (1.3.0)
+Requirement already satisfied: fsspec&gt;=0.6.0 in /usr/local/lib/python3.7/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (2022.8.2)
+Requirement already satisfied: packaging&gt;=20.0 in /usr/local/lib/python3.7/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (21.3)
 Requirement already satisfied: numpy&gt;=1.18 in /usr/local/lib/python3.7/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (1.21.6)
+Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in /usr/local/lib/python3.7/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (3.0.3)
+Requirement already satisfied: ipython-genutils~=0.2.0 in /usr/local/lib/python3.7/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.0)
+Requirement already satisfied: ipython&gt;=4.0.0 in /usr/local/lib/python3.7/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (7.9.0)
 Requirement already satisfied: widgetsnbextension~=3.6.0 in /usr/local/lib/python3.7/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (3.6.1)
 Requirement already satisfied: ipykernel&gt;=4.5.1 in /usr/local/lib/python3.7/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (5.3.4)
-Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in /usr/local/lib/python3.7/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (3.0.3)
-Requirement already satisfied: ipython&gt;=4.0.0 in /usr/local/lib/python3.7/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (7.9.0)
-Requirement already satisfied: ipython-genutils~=0.2.0 in /usr/local/lib/python3.7/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.0)
 Requirement already satisfied: traitlets&gt;=4.3.1 in /usr/local/lib/python3.7/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (5.1.1)
 Requirement already satisfied: jupyter-client in /usr/local/lib/python3.7/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.1.12)
 Requirement already satisfied: tornado&gt;=4.2 in /usr/local/lib/python3.7/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.2)
 Requirement already satisfied: jedi&gt;=0.10 in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.18.1)
-Requirement already satisfied: backcall in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.0)
-Requirement already satisfied: setuptools&gt;=18.5 in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (57.4.0)
 Requirement already satisfied: pexpect in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.8.0)
 Requirement already satisfied: decorator in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.4.2)
-Requirement already satisfied: pygments in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.6.1)
 Requirement already satisfied: prompt-toolkit&lt;2.1.0,&gt;=2.0.0 in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.0.10)
+Requirement already satisfied: setuptools&gt;=18.5 in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (57.4.0)
 Requirement already satisfied: pickleshare in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.7.5)
+Requirement already satisfied: pygments in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.6.1)
+Requirement already satisfied: backcall in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.0)
 Requirement already satisfied: pyparsing!=3.0.5,&gt;=2.0.2 in /usr/local/lib/python3.7/dist-packages (from packaging&gt;=20.0-&gt;dask[dataframe]&gt;=2.10.0-&gt;swifter) (3.0.9)
-Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.7/dist-packages (from pandas&gt;=1.0.0-&gt;swifter) (2.8.2)
 Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.7/dist-packages (from pandas&gt;=1.0.0-&gt;swifter) (2022.4)
+Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.7/dist-packages (from pandas&gt;=1.0.0-&gt;swifter) (2.8.2)
+Requirement already satisfied: locket in /usr/local/lib/python3.7/dist-packages (from partd&gt;=0.3.10-&gt;dask[dataframe]&gt;=2.10.0-&gt;swifter) (1.0.0)
+Requirement already satisfied: wcwidth in /usr/local/lib/python3.7/dist-packages (from prompt-toolkit&lt;2.1.0,&gt;=2.0.0-&gt;ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.5)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: locket in /usr/local/lib/python3.7/dist-packages (from partd&gt;=0.3.10-&gt;dask[dataframe]&gt;=2.10.0-&gt;swifter) (1.0.0)
-Requirement already satisfied: wcwidth in /usr/local/lib/python3.7/dist-packages (from prompt-toolkit&lt;2.1.0,&gt;=2.0.0-&gt;ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.5)
-Requirement already satisfied: notebook&gt;=4.4.1 in /usr/local/lib/python3.7/dist-packages (from widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (5.3.1)
-Requirement already satisfied: Send2Trash in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.8.0)
-Requirement already satisfied: nbconvert in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.5.4)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: notebook&gt;=4.4.1 in /usr/local/lib/python3.7/dist-packages (from widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (5.3.1)
 Requirement already satisfied: terminado&gt;=0.8.1 in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.13.3)
-Requirement already satisfied: jupyter-core&gt;=4.4.0 in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.11.1)
-Requirement already satisfied: jinja2 in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.1.2)
 Requirement already satisfied: nbformat in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (5.6.1)
+Requirement already satisfied: nbconvert in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.5.4)
+Requirement already satisfied: Send2Trash in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.8.0)
+Requirement already satisfied: jinja2 in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.1.2)
+Requirement already satisfied: jupyter-core&gt;=4.4.0 in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.11.1)
 Requirement already satisfied: pyzmq&gt;=13 in /usr/local/lib/python3.7/dist-packages (from jupyter-client-&gt;ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (23.2.1)
 Requirement already satisfied: ptyprocess in /usr/local/lib/python3.7/dist-packages (from terminado&gt;=0.8.1-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.7.0)
 Requirement already satisfied: MarkupSafe&gt;=2.0 in /usr/local/lib/python3.7/dist-packages (from jinja2-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.0.1)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.6.3)
 Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.8.4)
 Requirement already satisfied: entrypoints&gt;=0.2.2 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.4)
-Requirement already satisfied: pandocfilters&gt;=1.4.1 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.5.0)
-Requirement already satisfied: jupyterlab-pygments in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.2)
 Requirement already satisfied: nbclient&gt;=0.5.0 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.5.13)
-Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.6.3)
-Requirement already satisfied: tinycss2 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.1.1)
 Requirement already satisfied: defusedxml in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.7.1)
+Requirement already satisfied: jupyterlab-pygments in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.2)
 Requirement already satisfied: lxml in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.9.1)
+Requirement already satisfied: pandocfilters&gt;=1.4.1 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.5.0)
+Requirement already satisfied: tinycss2 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.1.1)
 Requirement already satisfied: nest-asyncio in /usr/local/lib/python3.7/dist-packages (from nbclient&gt;=0.5.0-&gt;nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.5.6)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: fastjsonschema in /usr/local/lib/python3.7/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.16.2)
 Requirement already satisfied: importlib-metadata&gt;=3.6 in /usr/local/lib/python3.7/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (5.0.0)
 Requirement already satisfied: jsonschema&gt;=2.6 in /usr/local/lib/python3.7/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.2.0)
+Requirement already satisfied: fastjsonschema in /usr/local/lib/python3.7/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.16.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: typing-extensions&gt;=3.6.4 in /usr/local/lib/python3.7/dist-packages (from importlib-metadata&gt;=3.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.1.1)
 Requirement already satisfied: zipp&gt;=0.5 in /usr/local/lib/python3.7/dist-packages (from importlib-metadata&gt;=3.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.8.1)
-Requirement already satisfied: typing-extensions&gt;=3.6.4 in /usr/local/lib/python3.7/dist-packages (from importlib-metadata&gt;=3.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.1.1)
-Requirement already satisfied: attrs&gt;=17.4.0 in /usr/local/lib/python3.7/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (21.4.0)
 Requirement already satisfied: pyrsistent&gt;=0.14.0 in /usr/local/lib/python3.7/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.18.1)
+Requirement already satisfied: attrs&gt;=17.4.0 in /usr/local/lib/python3.7/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (21.4.0)
 </pre></div>
 </div>
 </div>
@@ -1243,10 +1223,10 @@ Name: tweet, dtype: object
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Requirement already satisfied: nltk in /usr/local/lib/python3.7/dist-packages (3.7)
-Requirement already satisfied: regex&gt;=2021.8.3 in /usr/local/lib/python3.7/dist-packages (from nltk) (2022.6.2)
-Requirement already satisfied: click in /usr/local/lib/python3.7/dist-packages (from nltk) (7.1.2)
 Requirement already satisfied: tqdm in /usr/local/lib/python3.7/dist-packages (from nltk) (4.64.1)
 Requirement already satisfied: joblib in /usr/local/lib/python3.7/dist-packages (from nltk) (1.2.0)
+Requirement already satisfied: regex&gt;=2021.8.3 in /usr/local/lib/python3.7/dist-packages (from nltk) (2022.6.2)
+Requirement already satisfied: click in /usr/local/lib/python3.7/dist-packages (from nltk) (7.1.2)
 </pre></div>
 </div>
 </div>
@@ -1971,9 +1951,7 @@ tarif : tarif
 ya : ya
 lu : lu
 kk : kk
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bilar : bilar
+bilar : bilar
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>postingan : postingan
@@ -2027,28 +2005,26 @@ amputmmediumsocialamputmsourcetwitter : amputmmediumsocialamputmsourcetwitter
 you : you
 rot : rot
 in : in
+hell : hell
+buset : buset
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hell : hell
-buset : buset
-like : like
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>like : like
 video : video
 mesum : mesum
+twitter : twitter
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>twitter : twitter
-suarafresh : suarafresh
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>suarafresh : suarafresh
 kabar : kabar
 terbaru : baru
 keberadaan : ada
+penjaga : jaga
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>penjaga : jaga
-leslar : leslar
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>leslar : leslar
 nih : nih
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>awikwok : awikwok
+awikwok : awikwok
 banget : banget
 dituding : tuding
 anak : anak
@@ -2078,25 +2054,27 @@ oktober : oktober
 gak : gak
 yg : yg
 ga : ga
-melewati : lewat
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>melewati : lewat
 privasinya : privasi
+ngecek : ngecek
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ngecek : ngecek
-sebates : sebates
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pgen : pgen
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sebates : sebates
+pgen : pgen
 tau : tau
-apkh : apkh
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>apkh : apkh
 ad : ad
 indikasi : indikasi
 masuk : masuk
 komunitas : komunitas
+lovers : lovers
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>lovers : lovers
-nggk : nggk
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nggk : nggk
 layangkan : layang
 diatap : atap
 lo : lo
@@ -2113,38 +2091,35 @@ jdi : jdi
 badut : badut
 pala : pala
 gede : gede
-alias :
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> alias
+alias : alias
 omongan : omong
 doang : doang
-bgst : bgst
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tbtb : tbtb
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bgst : bgst
+tbtb : tbtb
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nanya : nanya
 dek : dek
 meninggal : tinggal
 berita : berita
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tiktok : tiktok
+tiktok : tiktok
 dipercaya : percaya
-cctv : cctv
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ngamuk : ngamuk
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>cctv : cctv
+ngamuk : ngamuk
 terungkap : ungkap
-skakmat : skakmat
-beredar : edar
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>instagram : instagram
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>skakmat : skakmat
+beredar : edar
+instagram : instagram
 diduga : duga
-berselingkuh : selingkuh
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>berselingkuh : selingkuh
 wanita : wanita
 selingkuhannya : selingkuh
 </pre></div>
@@ -2213,11 +2188,13 @@ dengerin : dengerin
 kedapatan : dapat
 jempol : jempol
 sepasang : pasang
-kekasih : kasih
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>makassar : makassar
-october : october
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>kekasih : kasih
+makassar : makassar
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>october : october
 at : at
 pm : pm
 hubungan : hubung
@@ -2227,12 +2204,11 @@ sepenuhnya : sepenuh
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>terputuskeduanya : terputuskeduanya
 dikabarkan : kabar
 menjalin : jalin
-detikcom
+detikcom : detikcom
+eksklusif : eksklusif
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> : detikcom
-eksklusif : eksklusif
-melemparkan : lempar
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>melemparkan : lempar
 arah : arah
 penjelasan : jelas
 kondisi : kondisi
@@ -2293,7 +2269,7 @@ yaudah : yaudah
 </pre></div>
 </div>
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "2cf7c83383af4fa681c679853ecc934e"}
+{"version_major": 2, "version_minor": 0, "model_id": "ccc53e61d566493bbbfdab1d70c474ff"}
 </script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     [laku, artis, rizky, billar, isu, selingkuh, d...
 1     [polisi, rizky, billar, kooperatif, penuh, pan...
 2           [kuasa, hukum, rizky, billar, sesal, salah]
@@ -2379,7 +2355,7 @@ Name: tweet, dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-e5629f79-2a55-4e30-bc50-41478bcba279">
+  <div id="df-a9a36149-5cd9-42a0-abed-577e21c5b1ce">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2768,7 +2744,7 @@ Name: tweet, dtype: object
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-e5629f79-2a55-4e30-bc50-41478bcba279')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-a9a36149-5cd9-42a0-abed-577e21c5b1ce')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2819,12 +2795,12 @@ Name: tweet, dtype: object
 
       <script>
         const buttonEl =
-          document.querySelector('#df-e5629f79-2a55-4e30-bc50-41478bcba279 button.colab-df-convert');
+          document.querySelector('#df-a9a36149-5cd9-42a0-abed-577e21c5b1ce button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-e5629f79-2a55-4e30-bc50-41478bcba279');
+          const element = document.querySelector('#df-a9a36149-5cd9-42a0-abed-577e21c5b1ce');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2904,7 +2880,7 @@ Name: tweet, dtype: object
 </pre></div>
 </div>
 <div class="output text_html">
-  <div id="df-33d34a4b-1631-4c43-844b-e4ba160cdede">
+  <div id="df-84d61721-1043-4589-8a8a-b60b0fdcb8ff">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -4392,7 +4368,7 @@ Name: tweet, dtype: object
 </table>
 <p>60 rows × 272 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-33d34a4b-1631-4c43-844b-e4ba160cdede')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-84d61721-1043-4589-8a8a-b60b0fdcb8ff')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -4443,12 +4419,12 @@ Name: tweet, dtype: object
 
       <script>
         const buttonEl =
-          document.querySelector('#df-33d34a4b-1631-4c43-844b-e4ba160cdede button.colab-df-convert');
+          document.querySelector('#df-84d61721-1043-4589-8a8a-b60b0fdcb8ff button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-33d34a4b-1631-4c43-844b-e4ba160cdede');
+          const element = document.querySelector('#df-84d61721-1043-4589-8a8a-b60b0fdcb8ff');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -4486,7 +4462,7 @@ Name: tweet, dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a3639483-b418-442f-8991-ff69c2f444bf">
+  <div id="df-70a05a9b-c554-4f99-a91f-8ce08bee59c1">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -4512,19 +4488,19 @@ Name: tweet, dtype: object
   <tbody>
     <tr>
       <th>0</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>4</th>
@@ -4532,11 +4508,11 @@ Name: tweet, dtype: object
     </tr>
     <tr>
       <th>5</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>7</th>
@@ -4544,11 +4520,11 @@ Name: tweet, dtype: object
     </tr>
     <tr>
       <th>8</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>10</th>
@@ -4556,11 +4532,11 @@ Name: tweet, dtype: object
     </tr>
     <tr>
       <th>11</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>13</th>
@@ -4568,27 +4544,27 @@ Name: tweet, dtype: object
     </tr>
     <tr>
       <th>14</th>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>15</th>
       <td>1</td>
     </tr>
     <tr>
+      <th>15</th>
+      <td>0</td>
+    </tr>
+    <tr>
       <th>16</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>17</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>18</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>19</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>20</th>
@@ -4596,23 +4572,23 @@ Name: tweet, dtype: object
     </tr>
     <tr>
       <th>21</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>22</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>23</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>24</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>25</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>26</th>
@@ -4624,19 +4600,19 @@ Name: tweet, dtype: object
     </tr>
     <tr>
       <th>28</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>29</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>30</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>31</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>32</th>
@@ -4648,11 +4624,11 @@ Name: tweet, dtype: object
     </tr>
     <tr>
       <th>34</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>35</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>36</th>
@@ -4660,7 +4636,7 @@ Name: tweet, dtype: object
     </tr>
     <tr>
       <th>37</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>38</th>
@@ -4668,11 +4644,11 @@ Name: tweet, dtype: object
     </tr>
     <tr>
       <th>39</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>40</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>41</th>
@@ -4696,7 +4672,7 @@ Name: tweet, dtype: object
     </tr>
     <tr>
       <th>46</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>47</th>
@@ -4704,7 +4680,7 @@ Name: tweet, dtype: object
     </tr>
     <tr>
       <th>48</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>49</th>
@@ -4712,11 +4688,11 @@ Name: tweet, dtype: object
     </tr>
     <tr>
       <th>50</th>
-      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>51</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>52</th>
@@ -4736,15 +4712,15 @@ Name: tweet, dtype: object
     </tr>
     <tr>
       <th>56</th>
-      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>57</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>58</th>
-      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>59</th>
@@ -4753,7 +4729,7 @@ Name: tweet, dtype: object
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-a3639483-b418-442f-8991-ff69c2f444bf')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-70a05a9b-c554-4f99-a91f-8ce08bee59c1')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -4804,12 +4780,12 @@ Name: tweet, dtype: object
 
       <script>
         const buttonEl =
-          document.querySelector('#df-a3639483-b418-442f-8991-ff69c2f444bf button.colab-df-convert');
+          document.querySelector('#df-70a05a9b-c554-4f99-a91f-8ce08bee59c1 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-a3639483-b418-442f-8991-ff69c2f444bf');
+          const element = document.querySelector('#df-70a05a9b-c554-4f99-a91f-8ce08bee59c1');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -4840,7 +4816,7 @@ Name: tweet, dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-41db0b7c-fe87-4e3b-97a8-bc285269ed4b">
+  <div id="df-a5c4e864-2e87-4265-955a-c7919839e363">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -6328,7 +6304,7 @@ Name: tweet, dtype: object
 </table>
 <p>60 rows × 273 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-41db0b7c-fe87-4e3b-97a8-bc285269ed4b')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-a5c4e864-2e87-4265-955a-c7919839e363')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -6379,12 +6355,12 @@ Name: tweet, dtype: object
 
       <script>
         const buttonEl =
-          document.querySelector('#df-41db0b7c-fe87-4e3b-97a8-bc285269ed4b button.colab-df-convert');
+          document.querySelector('#df-a5c4e864-2e87-4265-955a-c7919839e363 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-41db0b7c-fe87-4e3b-97a8-bc285269ed4b');
+          const element = document.querySelector('#df-a5c4e864-2e87-4265-955a-c7919839e363');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -6453,7 +6429,7 @@ memory usage: 128.1+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-68c69de8-e87a-4d18-863b-62b0eea105d4">
+  <div id="df-c457251a-07a3-4e26-94c4-d1ad45512123">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -7509,7 +7485,7 @@ memory usage: 128.1+ KB
 </table>
 <p>42 rows × 272 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-68c69de8-e87a-4d18-863b-62b0eea105d4')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-c457251a-07a3-4e26-94c4-d1ad45512123')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -7560,12 +7536,12 @@ memory usage: 128.1+ KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-68c69de8-e87a-4d18-863b-62b0eea105d4 button.colab-df-convert');
+          document.querySelector('#df-c457251a-07a3-4e26-94c4-d1ad45512123 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-68c69de8-e87a-4d18-863b-62b0eea105d4');
+          const element = document.querySelector('#df-c457251a-07a3-4e26-94c4-d1ad45512123');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -7749,7 +7725,7 @@ Name: label, dtype: object
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Persentase Akurasi&#39;)
 </pre></div>
 </div>
-<img alt="_images/crawlingdata_49_1.png" src="_images/crawlingdata_49_1.png" />
+<img alt="_images/crawlingdata_50_1.png" src="_images/crawlingdata_50_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -7762,61 +7738,74 @@ Name: label, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.00537286, 0.        , 0.01877989, 0.        , 0.        ,
-       0.        , 0.1708396 , 0.        , 0.0946778 , 0.02549895,
-       0.        , 0.01534932, 0.        , 0.        , 0.        ,
-       0.16806843, 0.06247792, 0.01538031, 0.        , 0.02940828,
-       0.        , 0.        , 0.0061897 , 0.        , 0.05772547,
-       0.        , 0.        , 0.        , 0.        , 0.07801699,
-       0.        , 0.        , 0.        , 0.        , 0.        ,
-       0.15849679, 0.05109024, 0.11013305, 0.        , 0.        ,
-       0.        , 0.01291314, 0.        , 0.01096449, 0.        ,
-       0.03371812, 0.07758537, 0.        , 0.02033118, 0.        ,
-       0.04662209, 0.09781428, 0.        , 0.        , 0.        ,
-       0.02546923, 0.        , 0.        , 0.        , 0.        ,
-       0.04423254, 0.        , 0.        , 0.        , 0.        ,
-       0.16025878, 0.13819718, 0.10267067, 0.09999285, 0.        ,
-       0.02514799, 0.06296665, 0.0191853 , 0.        , 0.05240612,
-       0.        , 0.00669191, 0.05565545, 0.05084604, 0.        ,
-       0.06036271, 0.        , 0.        , 0.07604736, 0.03089139,
-       0.        , 0.        , 0.        , 0.0298166 , 0.        ,
-       0.        , 0.        , 0.00696462, 0.        , 0.07177498,
-       0.        , 0.03333788, 0.01187324, 0.        , 0.03913255,
-       0.        , 0.        , 0.12232916, 0.01017256, 0.        ,
-       0.18658807, 0.03094662, 0.03729755, 0.15999132, 0.        ,
-       0.        , 0.0152557 , 0.        , 0.01109822, 0.        ,
-       0.00463504, 0.09162688, 0.        , 0.        , 0.        ,
-       0.01122131, 0.        , 0.06693663, 0.05265177, 0.01716398,
-       0.        , 0.08698496, 0.        , 0.08870447, 0.        ,
-       0.        , 0.        , 0.06180848, 0.1210655 , 0.        ,
-       0.        , 0.        , 0.04568731, 0.06174096, 0.0673349 ,
-       0.        , 0.        , 0.        , 0.        , 0.        ,
-       0.        , 0.02229582, 0.03626829, 0.04905114, 0.        ,
-       0.        , 0.00384172, 0.        , 0.04771894, 0.08430074,
-       0.03342206, 0.        , 0.0282075 , 0.        , 0.09564624,
-       0.        , 0.        , 0.04439316, 0.03490543, 0.17546216,
-       0.        , 0.00281298, 0.        , 0.        , 0.08417792,
-       0.03976472, 0.        , 0.        , 0.        , 0.00379388,
-       0.        , 0.        , 0.        , 0.03444425, 0.        ,
-       0.06519729, 0.        , 0.        , 0.        , 0.        ,
-       0.        , 0.        , 0.04211733, 0.        , 0.        ,
-       0.01061491, 0.03286375, 0.01691687, 0.01053056, 0.1095756 ,
-       0.        , 0.        , 0.04781487, 0.        , 0.        ,
-       0.0037847 , 0.03098818, 0.10680899, 0.08362219, 0.        ,
-       0.12962823, 0.10330044, 0.09072468, 0.05711047, 0.01429198,
-       0.        , 0.06753272, 0.        , 0.00879999, 0.        ,
-       0.        , 0.        , 0.03350452, 0.        , 0.        ,
-       0.21242011, 0.        , 0.08693852, 0.05528816, 0.05338787,
-       0.01739932, 0.        , 0.        , 0.        , 0.08133658,
-       0.17466527, 0.        , 0.04448884, 0.        , 0.01779787,
-       0.        , 0.11001313, 0.15114065, 0.        , 0.06364779,
-       0.        , 0.00370971, 0.10188646, 0.        , 0.04633983,
-       0.        , 0.04051827, 0.07094353, 0.        , 0.08918924,
-       0.        , 0.        , 0.        , 0.        , 0.0436562 ,
-       0.        , 0.03397263, 0.13803193, 0.        , 0.        ,
-       0.        , 0.        , 0.        , 0.        , 0.        ,
-       0.00191481, 0.06576505, 0.04649153, 0.        , 0.        ,
-       0.09818533, 0.00133847])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3.30183616e-02, 4.73873920e-02, 0.00000000e+00, 7.67908589e-02,
+       0.00000000e+00, 1.31012271e-03, 1.51112899e-01, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 6.50192311e-02, 3.07035467e-02,
+       5.76313147e-02, 0.00000000e+00, 5.39453182e-02, 0.00000000e+00,
+       0.00000000e+00, 1.18486993e-01, 2.01521175e-02, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 3.50583190e-02, 6.03142799e-02, 2.04590954e-02,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       7.73571577e-02, 6.56705639e-02, 1.49161595e-02, 0.00000000e+00,
+       3.15349904e-02, 6.88357188e-02, 2.56289917e-02, 0.00000000e+00,
+       0.00000000e+00, 3.56071749e-02, 2.43259957e-02, 5.41915667e-02,
+       0.00000000e+00, 4.72379383e-02, 0.00000000e+00, 4.17665578e-02,
+       5.88781499e-02, 0.00000000e+00, 2.02336543e-01, 0.00000000e+00,
+       0.00000000e+00, 7.46210564e-03, 0.00000000e+00, 1.45273288e-02,
+       0.00000000e+00, 0.00000000e+00, 2.82744943e-02, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 7.82083567e-02,
+       3.16758549e-02, 1.39343886e-03, 1.21793872e-01, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 1.00431438e-01, 1.22036604e-02,
+       4.26813176e-02, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       3.78272432e-02, 2.03379864e-02, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 2.08567798e-02, 0.00000000e+00, 1.95307924e-01,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       1.76838944e-02, 1.54632830e-03, 8.56833553e-02, 1.07534784e-01,
+       3.56361142e-02, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       5.13762603e-02, 1.68448342e-01, 9.18988329e-02, 1.73683517e-01,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 9.89572507e-02,
+       1.02098016e-01, 4.84911163e-02, 0.00000000e+00, 1.97977198e-02,
+       1.27510627e-02, 0.00000000e+00, 1.83750538e-03, 6.28369557e-02,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 1.58879339e-01, 0.00000000e+00, 5.22833558e-02,
+       0.00000000e+00, 0.00000000e+00, 4.07633282e-02, 5.08136518e-02,
+       0.00000000e+00, 4.98834409e-02, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 1.06730481e-02, 0.00000000e+00, 0.00000000e+00,
+       8.74587479e-03, 6.88411930e-02, 0.00000000e+00, 0.00000000e+00,
+       1.06696205e-01, 1.57439411e-04, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 1.33566080e-02, 0.00000000e+00, 0.00000000e+00,
+       1.37287241e-01, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 6.50667365e-02, 5.95289541e-02,
+       1.21901818e-02, 0.00000000e+00, 5.33868392e-02, 0.00000000e+00,
+       5.74025092e-02, 0.00000000e+00, 0.00000000e+00, 4.20986992e-02,
+       0.00000000e+00, 0.00000000e+00, 5.60694507e-02, 5.72244319e-03,
+       0.00000000e+00, 5.41818541e-02, 0.00000000e+00, 0.00000000e+00,
+       1.54811223e-03, 1.31062910e-01, 0.00000000e+00, 0.00000000e+00,
+       2.05166437e-02, 0.00000000e+00, 3.72712515e-02, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 1.18127800e-01,
+       0.00000000e+00, 0.00000000e+00, 7.66399516e-02, 2.98059655e-02,
+       0.00000000e+00, 6.65294933e-02, 0.00000000e+00, 2.54217254e-02,
+       0.00000000e+00, 0.00000000e+00, 5.06553542e-02, 1.29267417e-01,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       6.00402814e-02, 0.00000000e+00, 7.01513198e-03, 2.14177267e-02,
+       0.00000000e+00, 0.00000000e+00, 1.45678981e-01, 9.12504452e-04,
+       1.88726528e-02, 0.00000000e+00, 5.57877218e-02, 5.03933807e-02,
+       0.00000000e+00, 1.10342360e-01, 1.16219420e-01, 0.00000000e+00,
+       4.89492561e-02, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 1.12771398e-02, 7.15757037e-02, 1.01432788e-01,
+       3.72139675e-02, 1.72484172e-02, 1.46633252e-01, 0.00000000e+00,
+       7.31833553e-02, 0.00000000e+00, 3.10534614e-02, 0.00000000e+00,
+       9.71133935e-02, 0.00000000e+00, 2.97734913e-02, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 1.35636100e-02,
+       1.53991700e-01, 0.00000000e+00, 3.02781124e-02, 0.00000000e+00,
+       2.55558093e-01, 0.00000000e+00, 1.10390385e-01, 0.00000000e+00,
+       0.00000000e+00, 3.58714463e-03, 0.00000000e+00, 1.86204197e-01,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       3.78360967e-02, 0.00000000e+00, 9.06773362e-02, 6.13516024e-02,
+       5.60625792e-02, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       3.62591023e-02, 2.29282533e-02, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 1.24712514e-01, 7.40431437e-02, 1.16389488e-01])
 </pre></div>
 </div>
 </div>
@@ -7830,17 +7819,17 @@ Name: label, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(sebar,)      0.212420
-(jalin,)      0.186588
-(moga,)       0.175462
-(slam,)       0.174665
-(aja,)        0.170840
-                ...   
-(october,)    0.000000
-(hell,)       0.000000
-(okky,)       0.000000
-(hajar,)      0.000000
-(kubu,)       0.000000
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(terang,)       0.255558
+(cicil,)        0.202337
+(harta,)        0.195308
+(tinggal,)      0.186204
+(jadwal,)       0.173684
+                  ...   
+(daratista,)    0.000000
+(marah,)        0.000000
+(dalam,)        0.000000
+(mbappe,)       0.000000
+(october,)      0.000000
 Length: 272, dtype: float64
 </pre></div>
 </div>
@@ -7854,10 +7843,10 @@ Length: 272, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f5d102b3d10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fdb58476c90&gt;
 </pre></div>
 </div>
-<img alt="_images/crawlingdata_52_1.png" src="_images/crawlingdata_52_1.png" />
+<img alt="_images/crawlingdata_53_1.png" src="_images/crawlingdata_53_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -7877,40 +7866,50 @@ Length: 272, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([        (&#39;ada&#39;,),         (&#39;aja&#39;,),         (&#39;aku&#39;,),   (&#39;apartemen&#39;,),
-              (&#39;ayah&#39;,),       (&#39;badut&#39;,),   (&#39;banaspati&#39;,),      (&#39;benalu&#39;,),
-             (&#39;besok&#39;,),        (&#39;biar&#39;,),       (&#39;bilar&#39;,),      (&#39;biliar&#39;,),
-            (&#39;billar&#39;,),        (&#39;buka&#39;,),       (&#39;choke&#39;,),      (&#39;coreng&#39;,),
-             (&#39;dapat&#39;,),   (&#39;daratista&#39;,),       (&#39;doang&#39;,),        (&#39;done&#39;,),
-              (&#39;duga&#39;,),      (&#39;farhat&#39;,),        (&#39;gede&#39;,),        (&#39;gitu&#39;,),
-            (&#39;gundul&#39;,),       (&#39;hadir&#39;,),       (&#39;heboh&#39;,),        (&#39;hell&#39;,),
-            (&#39;idzhar&#39;,),          (&#39;in&#39;,),         (&#39;isu&#39;,),         (&#39;jdi&#39;,),
-              (&#39;kaya&#39;,),    (&#39;kesambet&#39;,),        (&#39;kini&#39;,),       (&#39;kirim&#39;,),
-         (&#39;komunitas&#39;,),         (&#39;kpi&#39;,),    (&#39;langsung&#39;,),       (&#39;lapor&#39;,),
-             (&#39;lesti&#39;,),        (&#39;like&#39;,),     (&#39;lindung&#39;,),          (&#39;lo&#39;,),
-            (&#39;lovers&#39;,),        (&#39;luka&#39;,),        (&#39;luna&#39;,),         (&#39;mah&#39;,),
-            (&#39;mbappe&#39;,),        (&#39;moga&#39;,),       (&#39;mulia&#39;,),        (&#39;nama&#39;,),
-             (&#39;nanya&#39;,),     (&#39;netizen&#39;,),      (&#39;ngakak&#39;,),        (&#39;nggk&#39;,),
-               (&#39;nih&#39;,),     (&#39;october&#39;,),        (&#39;ojak&#39;,),     (&#39;oktober&#39;,),
-             (&#39;omong&#39;,),       (&#39;orang&#39;,),     (&#39;panggil&#39;,),    (&#39;pascapol&#39;,),
-           (&#39;periksa&#39;,),          (&#39;pm&#39;,),      (&#39;polisi&#39;,),    (&#39;presiden&#39;,),
-           (&#39;pribadi&#39;,),     (&#39;privasi&#39;,),       (&#39;proof&#39;,),       (&#39;rizky&#39;,),
-       (&#39;rizkybillar&#39;,),       (&#39;rumah&#39;,),       (&#39;saksi&#39;,),        (&#39;sang&#39;,),
-            (&#39;sangka&#39;,),       (&#39;sasar&#39;,),       (&#39;sebab&#39;,),     (&#39;sebates&#39;,),
-             (&#39;sesal&#39;,),         (&#39;sih&#39;,),        (&#39;slam&#39;,),      (&#39;tangga&#39;,),
-           (&#39;tanggap&#39;,),         (&#39;tau&#39;,),     (&#39;telepon&#39;,),      (&#39;terang&#39;,),
-           (&#39;tinggal&#39;,),       (&#39;tmbah&#39;,),       (&#39;tubuh&#39;,),          (&#39;tv&#39;,),
-            (&#39;ungkap&#39;,),       (&#39;wajib&#39;,),      (&#39;wanita&#39;,),        (&#39;wish&#39;,),
-                (&#39;ya&#39;,),          (&#39;yg&#39;,),         (&#39;you&#39;,),     (&#39;youtube&#39;,)],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([              (&#39;ad&#39;,),              (&#39;aku&#39;,),        (&#39;apartemen&#39;,),
+                (&#39;armando&#39;,),             (&#39;atur&#39;,),              (&#39;ayu&#39;,),
+              (&#39;banaspati&#39;,),             (&#39;baru&#39;,),             (&#39;bgst&#39;,),
+                  (&#39;cekal&#39;,),            (&#39;depok&#39;,),         (&#39;detikcom&#39;,),
+                   (&#39;diam&#39;,),            (&#39;doang&#39;,),             (&#39;edar&#39;,),
+              (&#39;eksklusif&#39;,),           (&#39;farhat&#39;,),             (&#39;foto&#39;,),
+                     (&#39;ga&#39;,),           (&#39;gabisa&#39;,),     (&#39;gelenggeleng&#39;,),
+           (&#39;habishabisan&#39;,),            (&#39;hajar&#39;,),            (&#39;harta&#39;,),
+                    (&#39;hih&#39;,),           (&#39;hubung&#39;,),            (&#39;hukum&#39;,),
+                    (&#39;iis&#39;,),         (&#39;indikasi&#39;,),        (&#39;instagram&#39;,),
+                  (&#39;intip&#39;,),               (&#39;io&#39;,),              (&#39;isu&#39;,),
+                (&#39;isukdrt&#39;,),         (&#39;itusalah&#39;,),            (&#39;kapal&#39;,),
+                  (&#39;kasih&#39;,),             (&#39;kaya&#39;,),             (&#39;kdrt&#39;,),
+                 (&#39;kepala&#39;,),          (&#39;khianat&#39;,),             (&#39;kini&#39;,),
+                (&#39;kontrak&#39;,),             (&#39;kubu&#39;,),            (&#39;lapor&#39;,),
+                 (&#39;leslar&#39;,),            (&#39;lesti&#39;,),              (&#39;mah&#39;,),
+                  (&#39;mewah&#39;,),             (&#39;moga&#39;,),             (&#39;nama&#39;,),
+                (&#39;netizen&#39;,),           (&#39;ngamuk&#39;,),           (&#39;ngecek&#39;,),
+                   (&#39;nggk&#39;,),              (&#39;nih&#39;,),          (&#39;october&#39;,),
+                   (&#39;okky&#39;,),      (&#39;oktoberduit&#39;,),             (&#39;pala&#39;,),
+                  (&#39;pamer&#39;,),           (&#39;pasang&#39;,),            (&#39;penuh&#39;,),
+                (&#39;percaya&#39;,),           (&#39;pesiar&#39;,),           (&#39;polisi&#39;,),
+              (&#39;postingan&#39;,),          (&#39;pribadi&#39;,),          (&#39;privasi&#39;,),
+                (&#39;program&#39;,),            (&#39;raffi&#39;,),          (&#39;rahasia&#39;,),
+                 (&#39;rektor&#39;,),            (&#39;rizky&#39;,),      (&#39;rizkybillar&#39;,),
+                    (&#39;rot&#39;,),               (&#39;rp&#39;,),           (&#39;sangka&#39;,),
+                (&#39;sebates&#39;,),            (&#39;seleb&#39;,),          (&#39;sepenuh&#39;,),
+                  (&#39;sikap&#39;,),          (&#39;skakmat&#39;,),              (&#39;smp&#39;,),
+                  (&#39;sosok&#39;,),             (&#39;syok&#39;,),          (&#39;tanggap&#39;,),
+                (&#39;telepon&#39;,),            (&#39;tepis&#39;,), (&#39;terungkapskakmat&#39;,),
+                  (&#39;tmbah&#39;,),            (&#39;tubuh&#39;,),           (&#39;tuding&#39;,),
+                     (&#39;tv&#39;,),           (&#39;ungkap&#39;,),            (&#39;video&#39;,),
+                 (&#39;windah&#39;,),           (&#39;yaudah&#39;,),               (&#39;yg&#39;,),
+                (&#39;youtube&#39;,)],
       dtype=&#39;object&#39;)
 </pre></div>
 </div>
 </div>
 </div>
+</section>
 
 
 <script type="application/vnd.jupyter.widget-state+json">
-{"state": {"b247bc38084f4e83a661c119e719cdff": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "3c4cd1f7dc6d40f98d1c69d3341aad5a": {"model_name": "ProgressStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "ProgressStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "bar_color": null, "description_width": ""}}, "ca4e98279cd4408aba3b09483014cd12": {"model_name": "FloatProgressModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatProgressModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "ProgressView", "bar_style": "success", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_b247bc38084f4e83a661c119e719cdff", "max": 60.0, "min": 0.0, "orientation": "horizontal", "style": "IPY_MODEL_3c4cd1f7dc6d40f98d1c69d3341aad5a", "value": 60.0}}, "02bafc4e6072444aaf5e534d7b3632ff": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "860abef4ab99450081fa7df377b4173b": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "10fe35e699974746bc788dc34269a311": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HTMLView", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_02bafc4e6072444aaf5e534d7b3632ff", "placeholder": "\u200b", "style": "IPY_MODEL_860abef4ab99450081fa7df377b4173b", "value": "Pandas Apply: 100%"}}, "7f851f04141842efa70bb68a4f0d5c35": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "c280409c101b42b1b128e49e41c43117": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "26b7d746b8194ee598c0c8ef32f28987": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HTMLView", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_7f851f04141842efa70bb68a4f0d5c35", "placeholder": "\u200b", "style": "IPY_MODEL_c280409c101b42b1b128e49e41c43117", "value": " 60/60 [00:00&lt;00:00, 1647.85it/s]"}}, "0e4a83090aff42a894913f43b33eccf9": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "2cf7c83383af4fa681c679853ecc934e": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_10fe35e699974746bc788dc34269a311", "IPY_MODEL_ca4e98279cd4408aba3b09483014cd12", "IPY_MODEL_26b7d746b8194ee598c0c8ef32f28987"], "layout": "IPY_MODEL_0e4a83090aff42a894913f43b33eccf9"}}}, "version_major": 2, "version_minor": 0}
+{"state": {"5c949fe3ffe1499c8e771adad3491ee2": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "f7909e39979c460fab47af61bcec6e71": {"model_name": "ProgressStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "ProgressStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "bar_color": null, "description_width": ""}}, "1a9ea2c698c64795996e4b6c76b907c5": {"model_name": "FloatProgressModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatProgressModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "ProgressView", "bar_style": "success", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_5c949fe3ffe1499c8e771adad3491ee2", "max": 60.0, "min": 0.0, "orientation": "horizontal", "style": "IPY_MODEL_f7909e39979c460fab47af61bcec6e71", "value": 60.0}}, "f738af107dfd4503baa56988d24df9a2": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "54731ec8a3aa44deaaa2bb22836bb262": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "2288d4e2329745c4a9ed85aa78115c1a": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HTMLView", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_f738af107dfd4503baa56988d24df9a2", "placeholder": "\u200b", "style": "IPY_MODEL_54731ec8a3aa44deaaa2bb22836bb262", "value": "Pandas Apply: 100%"}}, "f7cea00a6de940d7a889868cdd004e2b": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "96f4ed2e0c1944038ec85272caea6403": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "5f7c6dc355bb4a39a3b34ac9fd2eebea": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HTMLView", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_f7cea00a6de940d7a889868cdd004e2b", "placeholder": "\u200b", "style": "IPY_MODEL_96f4ed2e0c1944038ec85272caea6403", "value": " 60/60 [00:00&lt;00:00, 2043.29it/s]"}}, "b139dd67c55a41b38dc878f769146e8e": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "ccc53e61d566493bbbfdab1d70c474ff": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_2288d4e2329745c4a9ed85aa78115c1a", "IPY_MODEL_1a9ea2c698c64795996e4b6c76b907c5", "IPY_MODEL_5f7c6dc355bb4a39a3b34ac9fd2eebea"], "layout": "IPY_MODEL_b139dd67c55a41b38dc878f769146e8e"}}}, "version_major": 2, "version_minor": 0}
 </script>
 
 
