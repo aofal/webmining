@@ -50,8 +50,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Markdown Files" href="markdown.html" />
+    <link rel="prev" title="Pengertian Web Mining" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -107,11 +111,16 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Welcome to your Jupyter Book
+                    Pengertian Web Mining
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Crawling Data
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="markdown.html">
    Markdown Files
@@ -353,41 +362,236 @@ title="Print to PDF"
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: aiohttp in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 1)) (3.7.0)
-Requirement already satisfied: aiodns in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 2)) (3.0.0)
-Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 3)) (4.6.3)
-Requirement already satisfied: cchardet in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 4)) (2.1.7)
-Requirement already satisfied: dataclasses in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 5)) (0.6)
-Requirement already satisfied: elasticsearch in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 6)) (8.4.3)
-Requirement already satisfied: pysocks in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 7)) (1.7.1)
-Requirement already satisfied: pandas&gt;=0.23.0 in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 8)) (1.3.5)
-Requirement already satisfied: aiohttp_socks&lt;=0.4.1 in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 9)) (0.4.1)
-Requirement already satisfied: schedule in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 10)) (1.1.0)
-Requirement already satisfied: geopy in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 11)) (1.17.0)
-Requirement already satisfied: fake-useragent in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 12)) (0.1.11)
-Requirement already satisfied: googletransx in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 13)) (2.4.2)
-Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.7/dist-packages (from pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (2.8.2)
-Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.7/dist-packages (from pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (2022.4)
-Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.7/dist-packages (from pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (1.21.6)
-Requirement already satisfied: attrs&gt;=19.2.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp_socks&lt;=0.4.1-&gt;-r requirements.txt (line 9)) (21.4.0)
-Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (1.8.1)
-Requirement already satisfied: chardet&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (3.0.4)
-Requirement already satisfied: async-timeout&lt;4.0,&gt;=3.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (3.0.1)
-Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (6.0.2)
-Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.7/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (1.15.0)
-Requirement already satisfied: typing-extensions&gt;=3.7.4 in /usr/local/lib/python3.7/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;-r requirements.txt (line 1)) (4.1.1)
-Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.7/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;-r requirements.txt (line 1)) (2.10)
-Requirement already satisfied: pycares&gt;=4.0.0 in /usr/local/lib/python3.7/dist-packages (from aiodns-&gt;-r requirements.txt (line 2)) (4.2.2)
-Requirement already satisfied: cffi&gt;=1.5.0 in /usr/local/lib/python3.7/dist-packages (from pycares&gt;=4.0.0-&gt;aiodns-&gt;-r requirements.txt (line 2)) (1.15.1)
-Requirement already satisfied: pycparser in /usr/local/lib/python3.7/dist-packages (from cffi&gt;=1.5.0-&gt;pycares&gt;=4.0.0-&gt;aiodns-&gt;-r requirements.txt (line 2)) (2.21)
-Requirement already satisfied: elastic-transport&lt;9,&gt;=8 in /usr/local/lib/python3.7/dist-packages (from elasticsearch-&gt;-r requirements.txt (line 6)) (8.4.0)
-Requirement already satisfied: certifi in /usr/local/lib/python3.7/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;-r requirements.txt (line 6)) (2022.9.24)
-Requirement already satisfied: urllib3&lt;2,&gt;=1.26.2 in /usr/local/lib/python3.7/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;-r requirements.txt (line 6)) (1.26.12)
+Requirement already satisfied: aiohttp in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 1)) (3.8.3)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: geographiclib&lt;2,&gt;=1.49 in /usr/local/lib/python3.7/dist-packages (from geopy-&gt;-r requirements.txt (line 11)) (1.52)
-Requirement already satisfied: requests in /usr/local/lib/python3.7/dist-packages (from googletransx-&gt;-r requirements.txt (line 13)) (2.28.1)
-Requirement already satisfied: charset-normalizer&lt;3,&gt;=2 in /usr/local/lib/python3.7/dist-packages (from requests-&gt;googletransx-&gt;-r requirements.txt (line 13)) (2.1.1)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting aiodns
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading aiodns-3.0.0-py3-none-any.whl (5.0 kB)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 3)) (4.6.3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting cchardet
+  Downloading cchardet-2.1.7-cp37-cp37m-manylinux2010_x86_64.whl (263 kB)
+?25l
+     |█▎                              | 10 kB 5.9 MB/s eta 0:00:01
+     |██▌                             | 20 kB 2.5 MB/s eta 0:00:01
+     |███▊                            | 30 kB 3.7 MB/s eta 0:00:01
+     |█████                           | 40 kB 1.7 MB/s eta 0:00:01
+     |██████▏                         | 51 kB 1.8 MB/s eta 0:00:01
+     |███████▌                        | 61 kB 2.2 MB/s eta 0:00:01
+     |████████▊                       | 71 kB 2.3 MB/s eta 0:00:01
+     |██████████                      | 81 kB 2.4 MB/s eta 0:00:01
+     |███████████▏                    | 92 kB 2.7 MB/s eta 0:00:01
+     |████████████▍                   | 102 kB 2.2 MB/s eta 0:00:01
+     |█████████████▊                  | 112 kB 2.2 MB/s eta 0:00:01
+     |███████████████                 | 122 kB 2.2 MB/s eta 0:00:01
+     |████████████████▏               | 133 kB 2.2 MB/s eta 0:00:01
+     |█████████████████▍              | 143 kB 2.2 MB/s eta 0:00:01
+     |██████████████████▋             | 153 kB 2.2 MB/s eta 0:00:01
+     |███████████████████▉            | 163 kB 2.2 MB/s eta 0:00:01
+     |█████████████████████▏          | 174 kB 2.2 MB/s eta 0:00:01
+     |██████████████████████▍         | 184 kB 2.2 MB/s eta 0:00:01
+     |███████████████████████▋        | 194 kB 2.2 MB/s eta 0:00:01
+     |████████████████████████▉       | 204 kB 2.2 MB/s eta 0:00:01
+     |██████████████████████████      | 215 kB 2.2 MB/s eta 0:00:01
+     |███████████████████████████▍    | 225 kB 2.2 MB/s eta 0:00:01
+     |████████████████████████████▋   | 235 kB 2.2 MB/s eta 0:00:01
+     |█████████████████████████████▉  | 245 kB 2.2 MB/s eta 0:00:01
+     |███████████████████████████████ | 256 kB 2.2 MB/s eta 0:00:01
+     |████████████████████████████████| 263 kB 2.2 MB/s 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?25hCollecting dataclasses
+  Downloading dataclasses-0.6-py3-none-any.whl (14 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting elasticsearch
+  Downloading elasticsearch-8.4.3-py3-none-any.whl (384 kB)
+?25l
+     |▉                               | 10 kB 24.5 MB/s eta 0:00:01
+     |█▊                              | 20 kB 32.3 MB/s eta 0:00:01
+     |██▋                             | 30 kB 35.6 MB/s eta 0:00:01
+     |███▍                            | 40 kB 41.8 MB/s eta 0:00:01
+     |████▎                           | 51 kB 46.8 MB/s eta 0:00:01
+     |█████▏                          | 61 kB 52.5 MB/s eta 0:00:01
+     |██████                          | 71 kB 56.0 MB/s eta 0:00:01
+     |██████▉                         | 81 kB 44.8 MB/s eta 0:00:01
+     |███████▊                        | 92 kB 46.1 MB/s eta 0:00:01
+     |████████▌                       | 102 kB 38.8 MB/s eta 0:00:01
+     |█████████▍                      | 112 kB 38.8 MB/s eta 0:00:01
+     |██████████▎                     | 122 kB 38.8 MB/s eta 0:00:01
+     |███████████                     | 133 kB 38.8 MB/s eta 0:00:01
+     |████████████                    | 143 kB 38.8 MB/s eta 0:00:01
+     |████████████▉                   | 153 kB 38.8 MB/s eta 0:00:01
+     |█████████████▋                  | 163 kB 38.8 MB/s eta 0:00:01
+     |██████████████▌                 | 174 kB 38.8 MB/s eta 0:00:01
+     |███████████████▍                | 184 kB 38.8 MB/s eta 0:00:01
+     |████████████████▏               | 194 kB 38.8 MB/s eta 0:00:01
+     |█████████████████               | 204 kB 38.8 MB/s eta 0:00:01
+     |██████████████████              | 215 kB 38.8 MB/s eta 0:00:01
+     |██████████████████▊             | 225 kB 38.8 MB/s eta 0:00:01
+     |███████████████████▋            | 235 kB 38.8 MB/s eta 0:00:01
+     |████████████████████▌           | 245 kB 38.8 MB/s eta 0:00:01
+     |█████████████████████▎          | 256 kB 38.8 MB/s eta 0:00:01
+     |██████████████████████▏         | 266 kB 38.8 MB/s eta 0:00:01
+     |███████████████████████         | 276 kB 38.8 MB/s eta 0:00:01
+     |███████████████████████▉        | 286 kB 38.8 MB/s eta 0:00:01
+     |████████████████████████▊       | 296 kB 38.8 MB/s eta 0:00:01
+     |█████████████████████████▋      | 307 kB 38.8 MB/s eta 0:00:01
+     |██████████████████████████▍     | 317 kB 38.8 MB/s eta 0:00:01
+     |███████████████████████████▎    | 327 kB 38.8 MB/s eta 0:00:01
+     |████████████████████████████▏   | 337 kB 38.8 MB/s eta 0:00:01
+     |█████████████████████████████   | 348 kB 38.8 MB/s eta 0:00:01
+     |█████████████████████████████▉  | 358 kB 38.8 MB/s eta 0:00:01
+     |██████████████████████████████▊ | 368 kB 38.8 MB/s eta 0:00:01
+     |███████████████████████████████▌| 378 kB 38.8 MB/s eta 0:00:01
+     |████████████████████████████████| 384 kB 38.8 MB/s 
+?25hRequirement already satisfied: pysocks in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 7)) (1.7.1)
+Requirement already satisfied: pandas&gt;=0.23.0 in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 8)) (1.3.5)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting aiohttp_socks&lt;=0.4.1
+  Downloading aiohttp_socks-0.4.1-py3-none-any.whl (17 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting schedule
+  Downloading schedule-1.1.0-py2.py3-none-any.whl (10 kB)
+Requirement already satisfied: geopy in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 11)) (1.17.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting fake-useragent
+  Downloading fake-useragent-0.1.11.tar.gz (13 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting googletransx
+  Downloading googletransx-2.4.2.tar.gz (13 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.7/dist-packages (from pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (2022.4)
+Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.7/dist-packages (from pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (1.21.6)
+Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.7/dist-packages (from pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (2.8.2)
+Requirement already satisfied: attrs&gt;=19.2.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp_socks&lt;=0.4.1-&gt;-r requirements.txt (line 9)) (21.4.0)
+Requirement already satisfied: frozenlist&gt;=1.1.1 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (1.3.1)
+Requirement already satisfied: asynctest==0.13.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (0.13.0)
+Requirement already satisfied: typing-extensions&gt;=3.7.4 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (4.1.1)
+Requirement already satisfied: charset-normalizer&lt;3.0,&gt;=2.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (2.1.1)
+Requirement already satisfied: aiosignal&gt;=1.1.2 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (1.2.0)
+Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (6.0.2)
+Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (1.8.1)
+Requirement already satisfied: async-timeout&lt;5.0,&gt;=4.0.0a3 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (4.0.2)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.7/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (1.15.0)
+Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.7/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;-r requirements.txt (line 1)) (2.10)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting pycares&gt;=4.0.0
+  Downloading pycares-4.2.2-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (288 kB)
+?25l
+     |█▏                              | 10 kB 29.9 MB/s eta 0:00:01
+     |██▎                             | 20 kB 33.3 MB/s eta 0:00:01
+     |███▍                            | 30 kB 38.4 MB/s eta 0:00:01
+     |████▌                           | 40 kB 41.5 MB/s eta 0:00:01
+     |█████▊                          | 51 kB 38.8 MB/s eta 0:00:01
+     |██████▉                         | 61 kB 41.5 MB/s eta 0:00:01
+     |████████                        | 71 kB 42.2 MB/s eta 0:00:01
+     |█████████                       | 81 kB 42.1 MB/s eta 0:00:01
+     |██████████▏                     | 92 kB 43.2 MB/s eta 0:00:01
+     |███████████▍                    | 102 kB 44.7 MB/s eta 0:00:01
+     |████████████▌                   | 112 kB 44.7 MB/s eta 0:00:01
+     |█████████████▋                  | 122 kB 44.7 MB/s eta 0:00:01
+     |██████████████▊                 | 133 kB 44.7 MB/s eta 0:00:01
+     |███████████████▉                | 143 kB 44.7 MB/s eta 0:00:01
+     |█████████████████               | 153 kB 44.7 MB/s eta 0:00:01
+     |██████████████████▏             | 163 kB 44.7 MB/s eta 0:00:01
+     |███████████████████▎            | 174 kB 44.7 MB/s eta 0:00:01
+     |████████████████████▍           | 184 kB 44.7 MB/s eta 0:00:01
+     |█████████████████████▋          | 194 kB 44.7 MB/s eta 0:00:01
+     |██████████████████████▊         | 204 kB 44.7 MB/s eta 0:00:01
+     |███████████████████████▉        | 215 kB 44.7 MB/s eta 0:00:01
+     |█████████████████████████       | 225 kB 44.7 MB/s eta 0:00:01
+     |██████████████████████████      | 235 kB 44.7 MB/s eta 0:00:01
+     |███████████████████████████▎    | 245 kB 44.7 MB/s eta 0:00:01
+     |████████████████████████████▍   | 256 kB 44.7 MB/s eta 0:00:01
+     |█████████████████████████████▌  | 266 kB 44.7 MB/s eta 0:00:01
+     |██████████████████████████████▋ | 276 kB 44.7 MB/s eta 0:00:01
+     |███████████████████████████████▊| 286 kB 44.7 MB/s eta 0:00:01
+     |████████████████████████████████| 288 kB 44.7 MB/s 
+?25hRequirement already satisfied: cffi&gt;=1.5.0 in /usr/local/lib/python3.7/dist-packages (from pycares&gt;=4.0.0-&gt;aiodns-&gt;-r requirements.txt (line 2)) (1.15.1)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.7/dist-packages (from cffi&gt;=1.5.0-&gt;pycares&gt;=4.0.0-&gt;aiodns-&gt;-r requirements.txt (line 2)) (2.21)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting elastic-transport&lt;9,&gt;=8
+  Downloading elastic_transport-8.4.0-py3-none-any.whl (59 kB)
+?25l
+     |█████▌                          | 10 kB 21.9 MB/s eta 0:00:01
+     |███████████                     | 20 kB 29.3 MB/s eta 0:00:01
+     |████████████████▌               | 30 kB 37.0 MB/s eta 0:00:01
+     |██████████████████████          | 40 kB 41.7 MB/s eta 0:00:01
+     |███████████████████████████▌    | 51 kB 44.1 MB/s eta 0:00:01
+     |████████████████████████████████| 59 kB 5.7 MB/s 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?25hCollecting urllib3&lt;2,&gt;=1.26.2
+  Downloading urllib3-1.26.12-py2.py3-none-any.whl (140 kB)
+?25l
+     |██▍                             | 10 kB 21.1 MB/s eta 0:00:01
+     |████▊                           | 20 kB 28.9 MB/s eta 0:00:01
+     |███████                         | 30 kB 36.2 MB/s eta 0:00:01
+     |█████████▍                      | 40 kB 41.0 MB/s eta 0:00:01
+     |███████████▊                    | 51 kB 45.3 MB/s eta 0:00:01
+     |██████████████                  | 61 kB 50.7 MB/s eta 0:00:01
+     |████████████████▍               | 71 kB 54.5 MB/s eta 0:00:01
+     |██████████████████▊             | 81 kB 57.9 MB/s eta 0:00:01
+     |█████████████████████           | 92 kB 61.3 MB/s eta 0:00:01
+     |███████████████████████▍        | 102 kB 63.5 MB/s eta 0:00:01
+     |█████████████████████████▊      | 112 kB 63.5 MB/s eta 0:00:01
+     |████████████████████████████    | 122 kB 63.5 MB/s eta 0:00:01
+     |██████████████████████████████▍ | 133 kB 63.5 MB/s eta 0:00:01
+     |████████████████████████████████| 140 kB 63.5 MB/s 
+?25hRequirement already satisfied: certifi in /usr/local/lib/python3.7/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;-r requirements.txt (line 6)) (2022.9.24)
+Requirement already satisfied: geographiclib&lt;2,&gt;=1.49 in /usr/local/lib/python3.7/dist-packages (from geopy-&gt;-r requirements.txt (line 11)) (1.52)
+Requirement already satisfied: requests in /usr/local/lib/python3.7/dist-packages (from googletransx-&gt;-r requirements.txt (line 13)) (2.23.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting requests
+  Downloading requests-2.28.1-py3-none-any.whl (62 kB)
+?25l
+     |█████▏                          | 10 kB 26.3 MB/s eta 0:00:01
+     |██████████▍                     | 20 kB 34.5 MB/s eta 0:00:01
+     |███████████████▋                | 30 kB 42.5 MB/s eta 0:00:01
+     |████████████████████▉           | 40 kB 46.0 MB/s eta 0:00:01
+     |██████████████████████████      | 51 kB 48.2 MB/s eta 0:00:01
+     |███████████████████████████████▎| 61 kB 52.0 MB/s eta 0:00:01
+     |████████████████████████████████| 62 kB 1.5 MB/s 
+?25hBuilding wheels for collected packages: fake-useragent, googletransx
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for fake-useragent (setup.py) ... ?25l?25hdone
+  Created wheel for fake-useragent: filename=fake_useragent-0.1.11-py3-none-any.whl size=13502 sha256=2c393c7d658ed1149180fff400e155b1920827126ff301d32a26ff89fc2510b0
+  Stored in directory: /root/.cache/pip/wheels/ed/f7/62/50ab6c9a0b5567267ab76a9daa9d06315704209b2c5d032031
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for googletransx (setup.py) ... ?25l?25hdone
+  Created wheel for googletransx: filename=googletransx-2.4.2-py3-none-any.whl size=15968 sha256=6500250bfea8c4879fd746f76af2aeac709a18f9907980a64e83e5999bf81cd2
+  Stored in directory: /root/.cache/pip/wheels/66/d5/b1/31104b338f7fd45aa8f7d22587765db06773b13df48a89735f
+Successfully built fake-useragent googletransx
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: urllib3, requests, pycares, elastic-transport, schedule, googletransx, fake-useragent, elasticsearch, dataclasses, cchardet, aiohttp-socks, aiodns
+  Attempting uninstall: urllib3
+    Found existing installation: urllib3 1.24.3
+    Uninstalling urllib3-1.24.3:
+      Successfully uninstalled urllib3-1.24.3
+  Attempting uninstall: requests
+    Found existing installation: requests 2.23.0
+    Uninstalling requests-2.23.0:
+      Successfully uninstalled requests-2.23.0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">ERROR: pip&#39;s dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.</span>
+<span class=" -Color -Color-Red">google-colab 1.0.0 requires tornado~=5.1.0, but you have tornado 6.2 which is incompatible.</span>
+Successfully installed aiodns-3.0.0 aiohttp-socks-0.4.1 cchardet-2.1.7 dataclasses-0.6 elastic-transport-8.4.0 elasticsearch-8.4.3 fake-useragent-0.1.11 googletransx-2.4.2 pycares-4.2.2 requests-2.28.1 schedule-1.1.0 urllib3-1.26.12
 </pre></div>
 </div>
 </div>
@@ -413,14 +617,168 @@ Requirement already satisfied: nest-asyncio in /usr/local/lib/python3.7/dist-pac
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: aiohttp==3.7.0 in /usr/local/lib/python3.7/dist-packages (3.7.0)
-Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.7/dist-packages (from aiohttp==3.7.0) (6.0.2)
-Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp==3.7.0) (1.8.1)
-Requirement already satisfied: async-timeout&lt;4.0,&gt;=3.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp==3.7.0) (3.0.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting aiohttp==3.7.0
+  Downloading aiohttp-3.7.0-cp37-cp37m-manylinux2014_x86_64.whl (1.3 MB)
+?25l
+     |▎                               | 10 kB 19.9 MB/s eta 0:00:01
+     |▌                               | 20 kB 2.8 MB/s eta 0:00:01
+     |▊                               | 30 kB 4.0 MB/s eta 0:00:01
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     |█                               | 40 kB 1.6 MB/s eta 0:00:01
+     |█▎                              | 51 kB 1.8 MB/s eta 0:00:01
+     |█▌                              | 61 kB 2.1 MB/s eta 0:00:01
+     |█▊                              | 71 kB 2.2 MB/s eta 0:00:01
+     |██                              | 81 kB 2.4 MB/s eta 0:00:01
+     |██▏                             | 92 kB 2.7 MB/s eta 0:00:01
+     |██▌                             | 102 kB 2.1 MB/s eta 0:00:01
+     |██▊                             | 112 kB 2.1 MB/s eta 0:00:01
+     |███                             | 122 kB 2.1 MB/s eta 0:00:01
+     |███▏                            | 133 kB 2.1 MB/s eta 0:00:01
+     |███▌                            | 143 kB 2.1 MB/s eta 0:00:01
+     |███▊                            | 153 kB 2.1 MB/s eta 0:00:01
+     |████                            | 163 kB 2.1 MB/s eta 0:00:01
+     |████▏                           | 174 kB 2.1 MB/s eta 0:00:01
+     |████▍                           | 184 kB 2.1 MB/s eta 0:00:01
+     |████▊                           | 194 kB 2.1 MB/s eta 0:00:01
+     |█████                           | 204 kB 2.1 MB/s eta 0:00:01
+     |█████▏                          | 215 kB 2.1 MB/s eta 0:00:01
+     |█████▍                          | 225 kB 2.1 MB/s eta 0:00:01
+     |█████▋                          | 235 kB 2.1 MB/s eta 0:00:01
+     |██████                          | 245 kB 2.1 MB/s eta 0:00:01
+     |██████▏                         | 256 kB 2.1 MB/s eta 0:00:01
+     |██████▍                         | 266 kB 2.1 MB/s eta 0:00:01
+     |██████▋                         | 276 kB 2.1 MB/s eta 0:00:01
+     |███████                         | 286 kB 2.1 MB/s eta 0:00:01
+     |███████▏                        | 296 kB 2.1 MB/s eta 0:00:01
+     |███████▍                        | 307 kB 2.1 MB/s eta 0:00:01
+     |███████▋                        | 317 kB 2.1 MB/s eta 0:00:01
+     |███████▉                        | 327 kB 2.1 MB/s eta 0:00:01
+     |████████▏                       | 337 kB 2.1 MB/s eta 0:00:01
+     |████████▍                       | 348 kB 2.1 MB/s eta 0:00:01
+     |████████▋                       | 358 kB 2.1 MB/s eta 0:00:01
+     |████████▉                       | 368 kB 2.1 MB/s eta 0:00:01
+     |█████████                       | 378 kB 2.1 MB/s eta 0:00:01
+     |█████████▍                      | 389 kB 2.1 MB/s eta 0:00:01
+     |█████████▋                      | 399 kB 2.1 MB/s eta 0:00:01
+     |█████████▉                      | 409 kB 2.1 MB/s eta 0:00:01
+     |██████████                      | 419 kB 2.1 MB/s eta 0:00:01
+     |██████████▍                     | 430 kB 2.1 MB/s eta 0:00:01
+     |██████████▋                     | 440 kB 2.1 MB/s eta 0:00:01
+     |██████████▉                     | 450 kB 2.1 MB/s eta 0:00:01
+     |███████████                     | 460 kB 2.1 MB/s eta 0:00:01
+     |███████████▎                    | 471 kB 2.1 MB/s eta 0:00:01
+     |███████████▋                    | 481 kB 2.1 MB/s eta 0:00:01
+     |███████████▉                    | 491 kB 2.1 MB/s eta 0:00:01
+     |████████████                    | 501 kB 2.1 MB/s eta 0:00:01
+     |████████████▎                   | 512 kB 2.1 MB/s eta 0:00:01
+     |████████████▌                   | 522 kB 2.1 MB/s eta 0:00:01
+     |████████████▉                   | 532 kB 2.1 MB/s eta 0:00:01
+     |█████████████                   | 542 kB 2.1 MB/s eta 0:00:01
+     |█████████████▎                  | 552 kB 2.1 MB/s eta 0:00:01
+     |█████████████▌                  | 563 kB 2.1 MB/s eta 0:00:01
+     |█████████████▉                  | 573 kB 2.1 MB/s eta 0:00:01
+     |██████████████                  | 583 kB 2.1 MB/s eta 0:00:01
+     |██████████████▎                 | 593 kB 2.1 MB/s eta 0:00:01
+     |██████████████▌                 | 604 kB 2.1 MB/s eta 0:00:01
+     |██████████████▊                 | 614 kB 2.1 MB/s eta 0:00:01
+     |███████████████                 | 624 kB 2.1 MB/s eta 0:00:01
+     |███████████████▎                | 634 kB 2.1 MB/s eta 0:00:01
+     |███████████████▌                | 645 kB 2.1 MB/s eta 0:00:01
+     |███████████████▊                | 655 kB 2.1 MB/s eta 0:00:01
+     |████████████████                | 665 kB 2.1 MB/s eta 0:00:01
+     |████████████████▎               | 675 kB 2.1 MB/s eta 0:00:01
+     |████████████████▌               | 686 kB 2.1 MB/s eta 0:00:01
+     |████████████████▊               | 696 kB 2.1 MB/s eta 0:00:01
+     |█████████████████               | 706 kB 2.1 MB/s eta 0:00:01
+     |█████████████████▎              | 716 kB 2.1 MB/s eta 0:00:01
+     |█████████████████▌              | 727 kB 2.1 MB/s eta 0:00:01
+     |█████████████████▊              | 737 kB 2.1 MB/s eta 0:00:01
+     |██████████████████              | 747 kB 2.1 MB/s eta 0:00:01
+     |██████████████████▏             | 757 kB 2.1 MB/s eta 0:00:01
+     |██████████████████▌             | 768 kB 2.1 MB/s eta 0:00:01
+     |██████████████████▊             | 778 kB 2.1 MB/s eta 0:00:01
+     |███████████████████             | 788 kB 2.1 MB/s eta 0:00:01
+     |███████████████████▏            | 798 kB 2.1 MB/s eta 0:00:01
+     |███████████████████▍            | 808 kB 2.1 MB/s eta 0:00:01
+     |███████████████████▊            | 819 kB 2.1 MB/s eta 0:00:01
+     |████████████████████            | 829 kB 2.1 MB/s eta 0:00:01
+     |████████████████████▏           | 839 kB 2.1 MB/s eta 0:00:01
+     |████████████████████▍           | 849 kB 2.1 MB/s eta 0:00:01
+     |████████████████████▊           | 860 kB 2.1 MB/s eta 0:00:01
+     |█████████████████████           | 870 kB 2.1 MB/s eta 0:00:01
+     |█████████████████████▏          | 880 kB 2.1 MB/s eta 0:00:01
+     |█████████████████████▍          | 890 kB 2.1 MB/s eta 0:00:01
+     |█████████████████████▋          | 901 kB 2.1 MB/s eta 0:00:01
+     |██████████████████████          | 911 kB 2.1 MB/s eta 0:00:01
+     |██████████████████████▏         | 921 kB 2.1 MB/s eta 0:00:01
+     |██████████████████████▍         | 931 kB 2.1 MB/s eta 0:00:01
+     |██████████████████████▋         | 942 kB 2.1 MB/s eta 0:00:01
+     |██████████████████████▉         | 952 kB 2.1 MB/s eta 0:00:01
+     |███████████████████████▏        | 962 kB 2.1 MB/s eta 0:00:01
+     |███████████████████████▍        | 972 kB 2.1 MB/s eta 0:00:01
+     |███████████████████████▋        | 983 kB 2.1 MB/s eta 0:00:01
+     |███████████████████████▉        | 993 kB 2.1 MB/s eta 0:00:01
+     |████████████████████████▏       | 1.0 MB 2.1 MB/s eta 0:00:01
+     |████████████████████████▍       | 1.0 MB 2.1 MB/s eta 0:00:01
+     |████████████████████████▋       | 1.0 MB 2.1 MB/s eta 0:00:01
+     |████████████████████████▉       | 1.0 MB 2.1 MB/s eta 0:00:01
+     |█████████████████████████       | 1.0 MB 2.1 MB/s eta 0:00:01
+     |█████████████████████████▍      | 1.1 MB 2.1 MB/s eta 0:00:01
+     |█████████████████████████▋      | 1.1 MB 2.1 MB/s eta 0:00:01
+     |█████████████████████████▉      | 1.1 MB 2.1 MB/s eta 0:00:01
+     |██████████████████████████      | 1.1 MB 2.1 MB/s eta 0:00:01
+     |██████████████████████████▎     | 1.1 MB 2.1 MB/s eta 0:00:01
+     |██████████████████████████▋     | 1.1 MB 2.1 MB/s eta 0:00:01
+     |██████████████████████████▉     | 1.1 MB 2.1 MB/s eta 0:00:01
+     |███████████████████████████     | 1.1 MB 2.1 MB/s eta 0:00:01
+     |███████████████████████████▎    | 1.1 MB 2.1 MB/s eta 0:00:01
+     |███████████████████████████▋    | 1.1 MB 2.1 MB/s eta 0:00:01
+     |███████████████████████████▉    | 1.2 MB 2.1 MB/s eta 0:00:01
+     |████████████████████████████    | 1.2 MB 2.1 MB/s eta 0:00:01
+     |████████████████████████████▎   | 1.2 MB 2.1 MB/s eta 0:00:01
+     |████████████████████████████▌   | 1.2 MB 2.1 MB/s eta 0:00:01
+     |████████████████████████████▉   | 1.2 MB 2.1 MB/s eta 0:00:01
+     |█████████████████████████████   | 1.2 MB 2.1 MB/s eta 0:00:01
+     |█████████████████████████████▎  | 1.2 MB 2.1 MB/s eta 0:00:01
+     |█████████████████████████████▌  | 1.2 MB 2.1 MB/s eta 0:00:01
+     |█████████████████████████████▊  | 1.2 MB 2.1 MB/s eta 0:00:01
+     |██████████████████████████████  | 1.2 MB 2.1 MB/s eta 0:00:01
+     |██████████████████████████████▎ | 1.3 MB 2.1 MB/s eta 0:00:01
+     |██████████████████████████████▌ | 1.3 MB 2.1 MB/s eta 0:00:01
+     |██████████████████████████████▊ | 1.3 MB 2.1 MB/s eta 0:00:01
+     |███████████████████████████████ | 1.3 MB 2.1 MB/s eta 0:00:01
+     |███████████████████████████████▎| 1.3 MB 2.1 MB/s eta 0:00:01
+     |███████████████████████████████▌| 1.3 MB 2.1 MB/s eta 0:00:01
+     |███████████████████████████████▊| 1.3 MB 2.1 MB/s eta 0:00:01
+     |████████████████████████████████| 1.3 MB 2.1 MB/s eta 0:00:01
+     |████████████████████████████████| 1.3 MB 2.1 MB/s 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?25hCollecting async-timeout&lt;4.0,&gt;=3.0
+  Downloading async_timeout-3.0.1-py3-none-any.whl (8.2 kB)
 Requirement already satisfied: chardet&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp==3.7.0) (3.0.4)
 Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp==3.7.0) (21.4.0)
-Requirement already satisfied: typing-extensions&gt;=3.7.4 in /usr/local/lib/python3.7/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp==3.7.0) (4.1.1)
+Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp==3.7.0) (1.8.1)
+Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.7/dist-packages (from aiohttp==3.7.0) (6.0.2)
 Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.7/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp==3.7.0) (2.10)
+Requirement already satisfied: typing-extensions&gt;=3.7.4 in /usr/local/lib/python3.7/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp==3.7.0) (4.1.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: async-timeout, aiohttp
+  Attempting uninstall: async-timeout
+    Found existing installation: async-timeout 4.0.2
+    Uninstalling async-timeout-4.0.2:
+      Successfully uninstalled async-timeout-4.0.2
+  Attempting uninstall: aiohttp
+    Found existing installation: aiohttp 3.8.3
+    Uninstalling aiohttp-3.8.3:
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      Successfully uninstalled aiohttp-3.8.3
+Successfully installed aiohttp-3.7.0 async-timeout-3.0.1
 </pre></div>
 </div>
 </div>
@@ -439,68 +797,70 @@ Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.7/dist-pac
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1579887901365583873 2022-10-11 17:33:23 +0000 &lt;detikcom&gt; Belum lama ini, unggahan close friends Rizky Billar bocor. Yang membocorkannya adalah Marissya Icha. Ini postingan close friends Rizky Billar:    https://t.co/e739So74aI
-1579886830119682049 2022-10-11 17:29:07 +0000 &lt;siikanpose&gt; @silaubgt Knpa harus bahas rizky billar sihh?
-1579884618743836672 2022-10-11 17:20:20 +0000 &lt;RizkybillarKDRT&gt; @Nafwyd @Ox_Oktoberduit1
-1579883969893781504 2022-10-11 17:17:45 +0000 &lt;orenjiiskyy&gt; @convomfs Nulis judulnya kurang bener nih. Harusnya kan &quot;Rizky Billar Enggak Malasah Jika Ditahan, Asal Jangan Bercerai, Dia Mencintai Uang Lesti&quot; gituuu
-1579883553965297664 2022-10-11 17:16:06 +0000 &lt;detikhot&gt; Belum lama ini, unggahan close friends Rizky Billar bocor. Yang membocorkannya adalah Marissya Icha. Ini postingan close friends Rizky Billar:   https://t.co/vP5JLERNqx
-1579883216420290560 2022-10-11 17:14:46 +0000 &lt;RizkybillarKDRT&gt; @GiveAwayHost @StevieStacks84 #TeamStacks
-1579883094634438657 2022-10-11 17:14:17 +0000 &lt;lessuguerr&gt; @urmomthighsx rizky billar woy lah 😭
-1579882802379517952 2022-10-11 17:13:07 +0000 &lt;RizkybillarKDRT&gt; Bismillahirrahmanirrahim bigwin banjir congrat
-1579882660146851842 2022-10-11 17:12:33 +0000 &lt;wow_keren&gt; Iis Dahlia Prihatin Rizky Billar Diduga Kasari Lesti Kejora: Harus ke Psikiater #IisDahlia  https://t.co/TBo7YN2DIh &amp;amp;utm_medium=social&amp;amp;utm_source=twitter
-1579881606122070017 2022-10-11 17:08:22 +0000 &lt;RizkybillarKDRT&gt; @GiveAwayHost @TheTw1tterX  https://t.co/tlcy6R8ssT
-1579880267598409728 2022-10-11 17:03:03 +0000 &lt;VIVAcoid&gt; Soal CCTV Aksi &#39;Smackdown&#39; ke Lesti Kejora, Polisi Bakal Cecar Rizky Billar  https://t.co/aUgapzer9q
-1579880014912573441 2022-10-11 17:02:02 +0000 &lt;jagodangdutcom&gt; Heboh! Yusuf Mansur Ngamuk Wirda Dijodohkan dengan Rizky Billar  https://t.co/bNYh2YyObC  https://t.co/EqNHbDLbAD
-1579879883391393811 2022-10-11 17:01:31 +0000 &lt;RizkybillarKDRT&gt; @Hello_Summy @StevieStacks84 @sweenpi #TeamStacks
-1579879872272699393 2022-10-11 17:01:28 +0000 &lt;Hnylutfiani&gt; @Askrlfess Ayo ngo pantai, cerita tentang rizky billar dan lesty wkwkwwk @ardyprsetiyo
-1579878589205733376 2022-10-11 16:56:23 +0000 &lt;detikcom&gt; Lesti Kejora ditalak Rizky Billar. Dijelaskan oleh kuasa hukum Billar, kliennya itu sudah menjatuhkan talak satu. Ini yang dilakukan Billar usai talak Lesti:   https://t.co/KOIyFaxuuR
-1579876550228422671 2022-10-11 16:48:16 +0000 &lt;akumilanda&gt; @pppppaak @overthinking_d R mana ya? Rizky Billar? Reza Arap? Regi Datau?
-1579875088966782976 2022-10-11 16:42:28 +0000 &lt;lunepth&gt; ini orang dari ngomongin dokter ngepost tulang selangka SAMPE NGOMONGIN RIZKY BILLAR  https://t.co/7C9fxMMrPW
-1579874917453303809 2022-10-11 16:41:47 +0000 &lt;TRENdotNEWS&gt; Apa Arti Warwerwor, Istilah Viral di TikTok? Kerap Diucapkan Kim Hawt, Sindir Rizky Billar  https://t.co/9PTho8MU5J
-1579873522859376648 2022-10-11 16:36:15 +0000 &lt;detikhot&gt; Lesti Kejora ditalak Rizky Billar. Dijelaskan oleh kuasa hukum Billar, kliennya itu sudah menjatuhkan talak satu. Ini yang dilakukan Billar usai talak Lesti:   https://t.co/k8XfkI2cw9
-1579872826147733506 2022-10-11 16:33:29 +0000 &lt;Anggicahaya5&gt; @choiwgo Rizky billar kesurupan jin apa
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1580000868661092352 2022-10-12 01:02:16 +0000 &lt;aur0rain&gt; @tpbangkit KDRT Rizky Billar. Si bangst keluarganya billar
+1579999947843375104 2022-10-12 00:58:37 +0000 &lt;KartumerahNews&gt; Beredar Video CCTV Detik-detik Rizky Billar Lempar Bola Biliar ke Lesti Kejora di Harapan Banyak Kru  https://t.co/21t6I4lZDq
+1579999841534418944 2022-10-12 00:58:11 +0000 &lt;bidadarihunter&gt; rizky billar love language nya choke slam
+1579999152699629568 2022-10-12 00:55:27 +0000 &lt;Alexis10820417&gt; Ngeri! Beredar Rekaman CCTV Rizky Billar Lempar Bola Biliar ke Lesti Kejora  https://t.co/mSIsP5IQKb
+1579998309699457024 2022-10-12 00:52:06 +0000 &lt;kompascom&gt; Viral video rekaman CCTV yang memperlihatkan Rizky Billar sedang melempar bola biliar ke arah Lesti Kejora  https://t.co/nde8MsZ5Q6
+1579998290593996800 2022-10-12 00:52:02 +0000 &lt;KompasEnt&gt; [POPULER HYPE] Viral Rekaman CCTV Rumah Lesti Kejora dan Rizky Billar | Jessica Iskandar Tak Mampu Bayar Cicilan  https://t.co/09rZpYJQzv
+1579997793858752512 2022-10-12 00:50:03 +0000 &lt;wahananewsdotco&gt; Detik-detik Rizky Billar Lempar Bola Biliar ke Lesti Kejora  https://t.co/5hq5lqFHmb #LestiKejora #Kdrt #RizkyBillar #Penyanyi
+1579997792252350464 2022-10-12 00:50:03 +0000 &lt;matamata_com&gt; CCTV Rizky Billar diduga melempar bola biliar ke Lesti Kejora viral.  https://t.co/H0u0aFrVue
+1579997764360220672 2022-10-12 00:49:56 +0000 &lt;iqbalsetya98&gt; Bagaimana kabar lesti dan rizky billar? ada apa sebeanrnya dengan banda neira? #leslar #LestiKejora #RizkyBillar    https://t.co/WzVPQkIZyW  https://t.co/WzVPQkIZyW  https://t.co/f9y6Z5kA0I
+1579997567316025344 2022-10-12 00:49:09 +0000 &lt;sqluishy&gt; @Askrlfess rizky billar anying, gregetan bgt gue liatnya
+1579997004779978754 2022-10-12 00:46:55 +0000 &lt;Detiksumsel_&gt; Sempat Membantah, Kini Tersebar Rekaman CCTV Rizky Billar Lempar Bola Billiard ke Arah Lesti Kejora  https://t.co/d4ZRxsPodR
+1579996665737801728 2022-10-12 00:45:34 +0000 &lt;intipseleb&gt; Netter Terhibur, Aldi Taher Buat Lirik Lagu Soal Lesti &amp;amp; Rizky Billar  https://t.co/9GyT4gPhQZ  https://t.co/qA0EKFEbVc
+1579996550045917185 2022-10-12 00:45:07 +0000 &lt;inibeneranuna&gt; Ngucap betoll liat si rizky billar b1 ini  untung kau kepleset kalo nda jadi apa pala si lesti kau lempar pake bola biliar  padahal disitu rame cowo ya tp kok ga ada yg ngelindungin si lesti satu pun, tolol
+1579996478910566400 2022-10-12 00:44:50 +0000 &lt;medianekita&gt; Rekaman CCTV Beredar, Anjas Asmara Nilai Hanya Framing Rizky Billar Untuk Bantah Tuduhan Lesti Kejora  https://t.co/mW3EJCLVsq
+1579995537071144960 2022-10-12 00:41:05 +0000 &lt;sofi_hwajiyong&gt; Warganet Kesal Usai Rizky Billar Keciduk Like Video Syur di Twitter: Psikis Terganggu Tapi Main Sosmed Lesti Kejora KDRT Selingkuh Inisial R  https://t.co/PjE3iqSdTM
+1579995426735824898 2022-10-12 00:40:39 +0000 &lt;silomansilo&gt; Momen Rizky Billar Lempar Bola Biliar ke Lesti Kejora  https://t.co/GehZv8kSeX
+1579995376555171840 2022-10-12 00:40:27 +0000 &lt;mapaybandungcom&gt; Disebut Netizen Sempat Dekat dengan Rizky Billar, Klarifikasi Lucinta Luna Malah Bikin Penasaran  https://t.co/qxqslsRBnX
+1579995274461618177 2022-10-12 00:40:02 +0000 &lt;KompasEnt&gt; Viral, Video CCTV Saat Rizky Billar Lempar Bola Biliar ke Arah Lesti Kejora  https://t.co/8hdPVGmSlY
+1579994788644139008 2022-10-12 00:38:07 +0000 &lt;intipseleb&gt; Tak Suka Rizky Billar Diboikot KPI, Saipul Jamil: Bisa Dituntut!  https://t.co/vxfrEPkENt  https://t.co/tun8TZLHNc
+1579994688593223681 2022-10-12 00:37:43 +0000 &lt;pikiran_rakyat&gt; Bocor Rekaman CCTV Rizky Billar Diduga Lempar Bola Biliar ke Lesti Kejora, Ternyata Disaksikan Banyak Orang  https://t.co/j8rGadsbJn  https://t.co/xNR5yyz333
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1579872318200741891 2022-10-11 16:31:27 +0000 &lt;xoxobearry&gt; @exteamcup @Askrlfess yaampun itu judulnya rizky billar lempar bola biliar ya? gw bacanya rizky billar lempar bola billar 😭
-1579870686394605570 2022-10-11 16:24:58 +0000 &lt;detikhot&gt; Ketika emosinya naik, Rizky Billar mengucapkan talak. Secara detail ia menyebut itu adalah talak satu.  https://t.co/ilFwELv7EC
-1579868913638129664 2022-10-11 16:17:56 +0000 &lt;tauberitamedia&gt; Kelakuan artis Rizky Billar di tengah isu perselingkuhan dan dugaan KDRT yang menimpanya justru membuat netizen geleng-geleng kepala.  https://t.co/5hYjYkAyB6
-1579868566803091457 2022-10-11 16:16:33 +0000 &lt;KapanLagicom&gt; Polisi Minta Rizky Billar Kooperatif Penuhi Panggilan Untuk Dimintai Keterangan Sebagai Saksi  https://t.co/RM01ki6SZz
-1579868207577731074 2022-10-11 16:15:07 +0000 &lt;VIVAcoid&gt; Kuasa Hukum Ungkap Rizky Billar Tak Menyesal dan Merasa Bersalah  https://t.co/7OAzM7BnSx  https://t.co/LXOl9S6Cmj
-1579868110017789953 2022-10-11 16:14:44 +0000 &lt;SuatuFakta&gt; Lesti – Billar terkini!!!!! 5 fakta kdrt yang di lakukan rizky billar  https://t.co/xbX5pcnvix
-1579867020308664320 2022-10-11 16:10:24 +0000 &lt;SardiAsan&gt; Rizky Billar akhirnya buka suara, dia menjelaskan setiap inci penyebab luka ditubuh Lesti Kejora  https://t.co/4cA5akXp0V
-1579865832640851968 2022-10-11 16:05:41 +0000 &lt;apothekid&gt; BACA INI RIZKY BILLAR!!!
-1579865298643349507 2022-10-11 16:03:34 +0000 &lt;heraldindo&gt; Rizky Billar Dipecat Program TV, Sang Kakak: Menurut Saya Itu Salah  https://t.co/mQOQmqBeXq
-1579864796077658113 2022-10-11 16:01:34 +0000 &lt;ANTVOfficial_&gt; Inikah Orang Ketiga di Rumah Tangga Lesti Kejora dan Rizky Billar? | Intip Seleb ANTV  https://t.co/8F5JZPDvho
-1579863216599203846 2022-10-11 15:55:17 +0000 &lt;VIVAcoid&gt; Punya Harta Rp400 Miliar, Satria Mulia Bongkar Tarif Rizky Billar  https://t.co/7eLjzb6WdR  https://t.co/CIFp85r4Ss
-1579862214596784135 2022-10-11 15:51:19 +0000 &lt;vvvipierre&gt; @ikrarfahri @adindivv @ESPNUK temennya Rizky Billar ya lu a?
-1579861207523430402 2022-10-11 15:47:18 +0000 &lt;AyshaAisah&gt; @RizkyBillar Betul kk bilar
-1579860639937617920 2022-10-11 15:45:03 +0000 &lt;VemaleDotcom&gt; Postingan Pribadi Rizky Billar Tersebar, Marah dan Singgung Sosok Pengkhianat  https://t.co/MOD7zxVP2u
-1579859905825361921 2022-10-11 15:42:08 +0000 &lt;VIVAcoid&gt; Satria Mulia Tak Percaya Rizky Billar Punya Harta Rp400 Miliar  https://t.co/zGpajbP4MB  https://t.co/LJRgwNoHnR
-1579859448004501505 2022-10-11 15:40:19 +0000 &lt;jebingisjebing&gt; Ini Rizky Billar kesambet apaan sih smp kaya gitu ke Lesti di depan orang2 lagi. HIH 🤬
-1579859038577528832 2022-10-11 15:38:41 +0000 &lt;mengadu22&gt; @oneiromansy Ayah ojak mah depok. Aku mau sama rizky billar aja biar kalo yang gabisa diatur langsung di choke slam.
-1579858647714103297 2022-10-11 15:37:08 +0000 &lt;20detik&gt; Momen Rizky Billar Lempar Bola Biliar ke Lesti Kejora  https://t.co/RBJaM1aPqD
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1579994448326533121 2022-10-12 00:36:46 +0000 &lt;Zyanpatra&gt; Soal Kasus KDRT Lesti Kejora, Penyidik Siapkan 25 Pertanyaan, Rizky Billar Siap-Siap!  https://t.co/rVm7UTxxXC
+1579994016980307968 2022-10-12 00:35:03 +0000 &lt;jpnncom&gt; Penyidik telah menyiapkan minimal 25 pertanyaan untuk Rizky Billar, dalam kasus KDRT Lesti Kejora. #RizkyBillar  https://t.co/RH5IRjrqGj
+1579993431585144832 2022-10-12 00:32:43 +0000 &lt;tantanamrr&gt; @siucupppppp rupinamah jalmi sajawabarat dinten ieu sami kitu a
+1579993285203877888 2022-10-12 00:32:08 +0000 &lt;PRFMnews&gt; Polisi Jadwalkan Pemeriksaan Rizky Billar Atas Dugaan KDRT Pada Kamis Besok  https://t.co/6HdQ2gfUqW
+1579993276899172352 2022-10-12 00:32:06 +0000 &lt;tantanamrr&gt; @ddrama08 muhun amin a , abi da rupinamah tos siap beunghar
+1579993153188560898 2022-10-12 00:31:37 +0000 &lt;pikiran_rakyat&gt; Rekaman CCTV Lesti Kejora Dilempar Bola Biliar oleh Rizky Billar Bocor, Kelakuan Buruk sang Aktor Terungkap  https://t.co/6QLkDBlTAC  https://t.co/680CJTwxRr
+1579993145479434240 2022-10-12 00:31:35 +0000 &lt;Tribun_Solo&gt; Jelang Pemeriksaan Rizky Billar, Beredar Bukti Video saat Rizky Billar Lempar Bola Biliar pada Lesti  https://t.co/UgEjipLFWE
+1579993049744035841 2022-10-12 00:31:12 +0000 &lt;1nserttranstv&gt; Kakak Klaim Rizky Billar Lebih Agamis Usai Dugaan Kasus KDRT Lesti Kejora  https://t.co/iV3EYn9AFA
+1579992547551637505 2022-10-12 00:29:12 +0000 &lt;tribunkaltim&gt; Pengacara Klaim Rizky Billar Sedang Tersiksa, Sebut Lesti Kejora Harusnya tak Berangkat Umrah Dulu    https://t.co/2gSwjPtQco lewat @tribunkaltim #LestiKejora #LestiKDRT #RizkyBillar
+1579991776386916352 2022-10-12 00:26:08 +0000 &lt;tantanamrr&gt; hudang sare joljol rungsing kieu , boa pibeunghareun
+1579990747776159744 2022-10-12 00:22:03 +0000 &lt;ngopibareng_id&gt; Pengacara membantah Rizky Billar melempar bola billiar ke Lesti. Faktanya, beredar video tersebut. Tapi Rizky Billar terpeleset. Lesti pun selamat.  https://t.co/ZuPItoZqWO
+1579990117481340928 2022-10-12 00:19:33 +0000 &lt;haluanharian&gt; Mengejutkan! Beredar Video Rizky Billar Melemparkan Bola ke Lesti  https://t.co/IWkAaKZONv
+1579989781861519361 2022-10-12 00:18:13 +0000 &lt;pikiran_rakyat&gt; Rekan Bisnis Tinggalkan Rizky Billar: Ayu Dewi Akan Akuisisi Perusahaan  https://t.co/F6EJ0Q9ZWX  https://t.co/lpPrU4j6du
+1579989375730991104 2022-10-12 00:16:36 +0000 &lt;KartumerahNews&gt; POPULER Seleb: Kondisi Terkini Nani Wijaya | Polisi Bongkar CCTV KDRT Rizky Billar di Persidangan  https://t.co/mdXG3iC8em
+1579989223620444160 2022-10-12 00:16:00 +0000 &lt;5758dotnet&gt; Mulai Aktif di Media Sosial, Rizky Billar Kedapatan Like Video Pasangan Mesum di Dalam Tenda - MSN  https://t.co/CjanwSSVSw
+1579988833076068352 2022-10-12 00:14:27 +0000 &lt;20detik&gt; Rizky Billar yang Kini Masih Syok dan Lebih Dekat dengan Agama  https://t.co/NL9FlI436V
+1579988228689776640 2022-10-12 00:12:03 +0000 &lt;KapanLagicom&gt; 8 Potret Detik-Detik Rizky Billar Lempar Bola Biliar ke Lesti Kejora yang Sedang Hamil, Terjadi Dini Hari dan Terekam CCTV - Pengacara Sempat Mengelak dan Sebut Cuma Gertakan  https://t.co/biYfkfOqll
+1579988056936894464 2022-10-12 00:11:22 +0000 &lt;Alexcrx_&gt; @megamndung @detikcom Takut bgt dilempar bola Rizky Billar!
+1579986978401292288 2022-10-12 00:07:05 +0000 &lt;tvOneNews&gt; Ada Rekayasa dan Informasi yang Hilang dari Rekaman CCTV di Kediaman Lesti Kejora dan Rizky Billar  https://t.co/t1ZRJrIJU6
+1579986881546457089 2022-10-12 00:06:41 +0000 &lt;ghaits_ali&gt; Hilang Pasca Dilaporka Lesti Kejora, Rizky Billar Nangis di Depan Uya Uya, Ngaku Hidupnya Tersiksa  https://t.co/CafFUhSsDN
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1579855407245582336 2022-10-11 15:24:16 +0000 &lt;wtbnpikacu&gt; @AnisaFbrn6 @nasyahta_a @aeribase RIZKY BILLAR GUNDULMU
-1579854605852512257 2022-10-11 15:21:04 +0000 &lt;wow_keren&gt; Nama Baik Kini Tercoreng, Kubu Rizky Billar Minta Perlindungan ke Presiden #RizkyBillar  https://t.co/pWSxRnwBEh &amp;amp;utm_medium=social&amp;amp;utm_source=twitter
-1579854083116400641 2022-10-11 15:19:00 +0000 &lt;autumnlovable&gt; RIZKY BILLAR, I WISH YOU ROT IN HELL
-1579853314757259265 2022-10-11 15:15:57 +0000 &lt;5758dotnet&gt; Buset! Rizky Billar Like Video Mesum di Twitter - SuaraFresh  https://t.co/HwqzfUfUE2
-1579852073415254018 2022-10-11 15:11:01 +0000 &lt;tribunkaltim&gt; Kabar Terbaru Lesti dan Rizky Billar, Keberadaan Penjaga Rumah Leslar yang Seharusnya Jadi Saksi   #Lesti #RizkyBillar #LeslarLovers #Leslar #LestiKejora   https://t.co/IcwuogdFEI lewat @tribunkaltim
-1579851712411873280 2022-10-11 15:09:35 +0000 &lt;goodbyexs&gt; Rizky billar nih awikwok banget
-1579850704805822469 2022-10-11 15:05:34 +0000 &lt;jagodangdutcom&gt; Rizky Billar Dituding Punya Anak Cewek, Terbongkar Fakta Sebenarnya!  https://t.co/Wy2dHpOpks  https://t.co/cC12vqGNV2
-1579850546227224577 2022-10-11 15:04:57 +0000 &lt;20detik&gt; Tanggapan Keluarga soal Rizky Billar Dicekal KPI  https://t.co/b4cJGib8MX
-1579849717445378050 2022-10-11 15:01:39 +0000 &lt;octobigbiz&gt; Ayu Thalia Ngakak Disebut Selingkuhan Rizky Billar Karena Pamer Foto Bareng: Salah Sasaran   https://t.co/YByi8JyOTI
-1579849691675561984 2022-10-11 15:01:33 +0000 &lt;kompascom&gt; Pemanggilan kedua untuk pemeriksaan terhadap Rizky Billar sudah dijadwalkan pada 13 Oktober 2022.  https://t.co/rryVeHvbRV
-1579849443129831424 2022-10-11 15:00:34 +0000 &lt;sukamakanlumpia&gt; @tanyakanrl Gak sih. Yg penting ga melewati privasinya (?) aku ngecek sebates pgen tau apkh dia ad indikasi masuk komunitas rizkybillar lovers atau nggk
-1579849308836433921 2022-10-11 15:00:02 +0000 &lt;dahSyatMusik&gt; Kasus KDRT Lesti, Polisi Layangkan Panggilan Kedua Rizky Billar #NewsRCTIPlus @RCTIPlus  https://t.co/ClfB5CUfTu
-1579849304805515265 2022-10-11 15:00:01 +0000 &lt;OfficialRCTI&gt; Ayu Thalia Ngakak Disebut Selingkuhan Rizky Billar karena Pamer Foto Bareng: Salah Sasaran #NewsRCTIPlus @RCTIPlus  https://t.co/m6V7V2sNhJ
-1579849078279909376 2022-10-11 14:59:07 +0000 &lt;siulenmah&gt; @Askrlfess Rizky Billar, siap2 diatap rumah lo ada banaspati kiriman dari gue karna lo ga tau diri dan benalu, ANJING!!!
-1579848909064900609 2022-10-11 14:58:26 +0000 &lt;ilopubeb&gt; @convomfs rizky billar ini memang cocok jdi badut pala gede alias omongan doang gede bgst
-1579848396000882689 2022-10-11 14:56:24 +0000 &lt;sebatkyu&gt; ibu gue tbtb nanya &quot;dek rizky billar meninggal?&quot; berita tiktok dipercaya😭
-1579847361593249805 2022-10-11 14:52:17 +0000 &lt;1nserttranstv&gt; Video CCTV Rizky Billar Ngamuk Lempar Biliar ke Lesti Terungkap, Skakmat...  https://t.co/EUrpnhOPs3
-1579847004460834817 2022-10-11 14:50:52 +0000 &lt;serambinews&gt; #RizkyBillar #LestyKejora #AyuThalia |  &quot;Ada beredar di Instagram kan diduga berselingkuh. Ada wanita yang diduga selingkuhannya, katanya,&quot; ucap Raffi.   https://t.co/nu8d7rRH8J
-1579846897010778117 2022-10-11 14:50:27 +0000 &lt;fajaronline&gt; Rizky Billar Pernah Mengontrak di Apartemennya, Iis Dahlia Tak Menyangka Bisa KDRT  https://t.co/Hn2QTPYu0W #KDRT #LestiKejora #PasanganSelebritis #RizkyBillar
-1579846771756642311 2022-10-11 14:49:57 +0000 &lt;MaduraExpose&gt; Tonton &quot;Rizky Billar Enggan Minta Maaf&quot; di YouTube  https://t.co/55h0RxvOLq
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1579985309743607808 2022-10-12 00:00:27 +0000 &lt;yoursweetby_&gt; Laki-laki inisial R emang banyak problem kecuali Rehan  #rezaarapselingkuh #RizkyBillar #reinhard #RexOrangeCounty
+1579985237215703040 2022-10-12 00:00:09 +0000 &lt;kumparan&gt; Marissya Icha bocorkan unggahan close friend Rizky Billar di Instagram jadi salah satu berita populer pada Selasa (11/10).#kumparanHITS  https://t.co/m7AKBgwgVG
+1579985198170755073 2022-10-12 00:00:00 +0000 &lt;officialnova_id&gt; Marissya Icha buka suara usai bongkar curhatan Rizky Billar, &quot;bukan aib kan?&quot;   https://t.co/Xs3ttgD7eE
+1579985196547395584 2022-10-12 00:00:00 +0000 &lt;mitanurmalaa&gt; Kmren nyekik, nge banting, skrg muncul lagi vidio lembar bola billar.. Ngeri banget udah kaya monster kau @RizkyBillar 😡
+1579983463721349120 2022-10-11 23:53:07 +0000 &lt;21BeritaTerkini&gt; Walah! Kena Banting dan Cekik Rizky Billar, Ipar Justru Salahkan Lesti Kejora yang Lapor Soal KDRT: Itu Keharmonisan!  https://t.co/Jo7hxgy5D8
+1579982851558473728 2022-10-11 23:50:41 +0000 &lt;dith_nattawat1&gt; For rizky billar  https://t.co/fu11jIJLZM
+1579982831287037957 2022-10-11 23:50:36 +0000 &lt;KartumerahNews&gt; Rizky Billar Bakal Jadi Tersangka Kasus KDRT Pada Lesti Kejora? Kedatangannya Besok Jadi Penentu  https://t.co/mSKPD9zhFf
+1579982752363188224 2022-10-11 23:50:17 +0000 &lt;hoonvoyage&gt; NOONE CARES !!! SHUT THE FUCK UP RIZKY BILLAR !!!! GO GET JAILED OR SUMN LEAVE LESTI ALONE !!!!
+1579982334576971777 2022-10-11 23:48:37 +0000 &lt;VIVAcoid&gt; Viral Video CCTV Diduga Rizky Billar Lempar Bola Billiar ke Lesti Kejora  https://t.co/gYsZbIiKmt
+1579981074113101825 2022-10-11 23:43:37 +0000 &lt;dheaspellman&gt; Gegara kemaren nyari gigolonya rizky billar, pemberitahuan tweet gua kok isinya orang sagne terua amjgg
+1579980905707614208 2022-10-11 23:42:57 +0000 &lt;rian_larope&gt; Reza Arap : selingkuh Regi Datau : selingkuh Rizky Billar : kdrt  Sejauh ini laki² inisial R yg baik memang cuma Rian...!!!
+1579980493696950272 2022-10-11 23:41:18 +0000 &lt;SINDOnews&gt; Bela Rizky Billar, Aldi Taher Minta Publik Jangan Terlalu Membela Lesti Kejora   #Sindonews #BukanBeritaBiasa . https://t.co/ZNgLNFWqHJ
+1579978690334969857 2022-10-11 23:34:09 +0000 &lt;KartumerahNews&gt; Asisten Rizky Billar Mangkir Pemeriksaan, Polisi Langsung Jadwalkan Panggilan Kedua  https://t.co/xSNkfb9Sup
+1579978555894960129 2022-10-11 23:33:36 +0000 &lt;ghaits_ali&gt; Mulut Dibungkam Baju Ditarik, Pasca Talak Lesti Kejora, Rizky Billar Ajak Berhubungan Suami Istri  https://t.co/eh0U1RUy8Y
+1579978552271073280 2022-10-11 23:33:36 +0000 &lt;pikiran_rakyat&gt; Kisruh soal Rizky Billar Diduga KDRT pada Lesti Kejora, Iis Dahlia: Adaptasi Pernikahan Itu  https://t.co/Cr36vhbTzB  https://t.co/uJ4hjeRI0V
+1579978252939993089 2022-10-11 23:32:24 +0000 &lt;TRENdotNEWS&gt; Beredar CCTV Rizky Billar Emosi Lempar Bola Biliar ke Lesti Kejora  https://t.co/IsRg6JIKlp
+1579977836169166848 2022-10-11 23:30:45 +0000 &lt;1nserttranstv&gt; Respons Marissya Icha Usai Bocorkan Close Friend Rizky Billar  https://t.co/UsN7krYzu9
+1579977296110555138 2022-10-11 23:28:36 +0000 &lt;intipseleb&gt; Nasib Rumah Tangga Lesti dan Rizky Billar, Kabar Terbaru Syekh Puji  https://t.co/XWmWWpLapM  https://t.co/zZGJ0q0pgb
+1579976691442929664 2022-10-11 23:26:12 +0000 &lt;triyuli73343449&gt; @sherpa701 Tambah 1 Om Kdrt : Rizky Billar
+1579976642667024384 2022-10-11 23:26:00 +0000 &lt;beibehreinz82&gt; Pake bola biliar aja. Rizky Billar jadiin maskotnya.
 </pre></div>
 </div>
 </div>
@@ -513,64 +873,66 @@ Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.7/dist-pac
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     Belum lama ini, unggahan close friends Rizky B...
-1         @silaubgt Knpa harus bahas rizky billar sihh?
-2                              @Nafwyd @Ox_Oktoberduit1
-3     @convomfs Nulis judulnya kurang bener nih. Har...
-4     Belum lama ini, unggahan close friends Rizky B...
-5             @GiveAwayHost @StevieStacks84 #TeamStacks
-6                  @urmomthighsx rizky billar woy lah 😭
-7        Bismillahirrahmanirrahim bigwin banjir congrat
-8     Iis Dahlia Prihatin Rizky Billar Diduga Kasari...
-9     @GiveAwayHost @TheTw1tterX  https://t.co/tlcy6...
-10    Soal CCTV Aksi &#39;Smackdown&#39; ke Lesti Kejora, Po...
-11    Heboh! Yusuf Mansur Ngamuk Wirda Dijodohkan de...
-12    @Hello_Summy @StevieStacks84 @sweenpi #TeamStacks
-13    @Askrlfess Ayo ngo pantai, cerita tentang rizk...
-14    Lesti Kejora ditalak Rizky Billar. Dijelaskan ...
-15    @pppppaak @overthinking_d R mana ya? Rizky Bil...
-16    ini orang dari ngomongin dokter ngepost tulang...
-17    Apa Arti Warwerwor, Istilah Viral di TikTok? K...
-18    Lesti Kejora ditalak Rizky Billar. Dijelaskan ...
-19              @choiwgo Rizky billar kesurupan jin apa
-20    @exteamcup @Askrlfess yaampun itu judulnya riz...
-21    Ketika emosinya naik, Rizky Billar mengucapkan...
-22    Kelakuan artis Rizky Billar di tengah isu pers...
-23    Polisi Minta Rizky Billar Kooperatif Penuhi Pa...
-24    Kuasa Hukum Ungkap Rizky Billar Tak Menyesal d...
-25    Lesti – Billar terkini!!!!! 5 fakta kdrt yang ...
-26    Rizky Billar akhirnya buka suara, dia menjelas...
-27                             BACA INI RIZKY BILLAR!!!
-28    Rizky Billar Dipecat Program TV, Sang Kakak: M...
-29    Inikah Orang Ketiga di Rumah Tangga Lesti Kejo...
-30    Punya Harta Rp400 Miliar, Satria Mulia Bongkar...
-31    @ikrarfahri @adindivv @ESPNUK temennya Rizky B...
-32                          @RizkyBillar Betul kk bilar
-33    Postingan Pribadi Rizky Billar Tersebar, Marah...
-34    Satria Mulia Tak Percaya Rizky Billar Punya Ha...
-35    Ini Rizky Billar kesambet apaan sih smp kaya g...
-36    @oneiromansy Ayah ojak mah depok. Aku mau sama...
-37    Momen Rizky Billar Lempar Bola Biliar ke Lesti...
-38    @AnisaFbrn6 @nasyahta_a @aeribase RIZKY BILLAR...
-39    Nama Baik Kini Tercoreng, Kubu Rizky Billar Mi...
-40                 RIZKY BILLAR, I WISH YOU ROT IN HELL
-41    Buset! Rizky Billar Like Video Mesum di Twitte...
-42    Kabar Terbaru Lesti dan Rizky Billar, Keberada...
-43                      Rizky billar nih awikwok banget
-44    Rizky Billar Dituding Punya Anak Cewek, Terbon...
-45    Tanggapan Keluarga soal Rizky Billar Dicekal K...
-46    Ayu Thalia Ngakak Disebut Selingkuhan Rizky Bi...
-47    Pemanggilan kedua untuk pemeriksaan terhadap R...
-48    @tanyakanrl Gak sih. Yg penting ga melewati pr...
-49    Kasus KDRT Lesti, Polisi Layangkan Panggilan K...
-50    Ayu Thalia Ngakak Disebut Selingkuhan Rizky Bi...
-51    @Askrlfess Rizky Billar, siap2 diatap rumah lo...
-52    @convomfs rizky billar ini memang cocok jdi ba...
-53    ibu gue tbtb nanya &quot;dek rizky billar meninggal...
-54    Video CCTV Rizky Billar Ngamuk Lempar Biliar k...
-55    #RizkyBillar #LestyKejora #AyuThalia |  &quot;Ada b...
-56    Rizky Billar Pernah Mengontrak di Apartemennya...
-57    Tonton &quot;Rizky Billar Enggan Minta Maaf&quot; di You...
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     @tpbangkit KDRT Rizky Billar. Si bangst keluar...
+1     Beredar Video CCTV Detik-detik Rizky Billar Le...
+2             rizky billar love language nya choke slam
+3     Ngeri! Beredar Rekaman CCTV Rizky Billar Lempa...
+4     Viral video rekaman CCTV yang memperlihatkan R...
+5     [POPULER HYPE] Viral Rekaman CCTV Rumah Lesti ...
+6     Detik-detik Rizky Billar Lempar Bola Biliar ke...
+7     CCTV Rizky Billar diduga melempar bola biliar ...
+8     Bagaimana kabar lesti dan rizky billar? ada ap...
+9     @Askrlfess rizky billar anying, gregetan bgt g...
+10    Sempat Membantah, Kini Tersebar Rekaman CCTV R...
+11    Netter Terhibur, Aldi Taher Buat Lirik Lagu So...
+12    Ngucap betoll liat si rizky billar b1 ini  unt...
+13    Rekaman CCTV Beredar, Anjas Asmara Nilai Hanya...
+14    Warganet Kesal Usai Rizky Billar Keciduk Like ...
+15    Momen Rizky Billar Lempar Bola Biliar ke Lesti...
+16    Disebut Netizen Sempat Dekat dengan Rizky Bill...
+17    Viral, Video CCTV Saat Rizky Billar Lempar Bol...
+18    Tak Suka Rizky Billar Diboikot KPI, Saipul Jam...
+19    Bocor Rekaman CCTV Rizky Billar Diduga Lempar ...
+20    Soal Kasus KDRT Lesti Kejora, Penyidik Siapkan...
+21    Penyidik telah menyiapkan minimal 25 pertanyaa...
+22    @siucupppppp rupinamah jalmi sajawabarat dinte...
+23    Polisi Jadwalkan Pemeriksaan Rizky Billar Atas...
+24    @ddrama08 muhun amin a , abi da rupinamah tos ...
+25    Rekaman CCTV Lesti Kejora Dilempar Bola Biliar...
+26    Jelang Pemeriksaan Rizky Billar, Beredar Bukti...
+27    Kakak Klaim Rizky Billar Lebih Agamis Usai Dug...
+28    Pengacara Klaim Rizky Billar Sedang Tersiksa, ...
+29    hudang sare joljol rungsing kieu , boa pibeung...
+30    Pengacara membantah Rizky Billar melempar bola...
+31    Mengejutkan! Beredar Video Rizky Billar Melemp...
+32    Rekan Bisnis Tinggalkan Rizky Billar: Ayu Dewi...
+33    POPULER Seleb: Kondisi Terkini Nani Wijaya | P...
+34    Mulai Aktif di Media Sosial, Rizky Billar Keda...
+35    Rizky Billar yang Kini Masih Syok dan Lebih De...
+36    8 Potret Detik-Detik Rizky Billar Lempar Bola ...
+37    @megamndung @detikcom Takut bgt dilempar bola ...
+38    Ada Rekayasa dan Informasi yang Hilang dari Re...
+39    Hilang Pasca Dilaporka Lesti Kejora, Rizky Bil...
+40    Laki-laki inisial R emang banyak problem kecua...
+41    Marissya Icha bocorkan unggahan close friend R...
+42    Marissya Icha buka suara usai bongkar curhatan...
+43    Kmren nyekik, nge banting, skrg muncul lagi vi...
+44    Walah! Kena Banting dan Cekik Rizky Billar, Ip...
+45            For rizky billar  https://t.co/fu11jIJLZM
+46    Rizky Billar Bakal Jadi Tersangka Kasus KDRT P...
+47    NOONE CARES !!! SHUT THE FUCK UP RIZKY BILLAR ...
+48    Viral Video CCTV Diduga Rizky Billar Lempar Bo...
+49    Gegara kemaren nyari gigolonya rizky billar, p...
+50    Reza Arap : selingkuh Regi Datau : selingkuh R...
+51    Bela Rizky Billar, Aldi Taher Minta Publik Jan...
+52    Asisten Rizky Billar Mangkir Pemeriksaan, Poli...
+53    Mulut Dibungkam Baju Ditarik, Pasca Talak Lest...
+54    Kisruh soal Rizky Billar Diduga KDRT pada Lest...
+55    Beredar CCTV Rizky Billar Emosi Lempar Bola Bi...
+56    Respons Marissya Icha Usai Bocorkan Close Frie...
+57    Nasib Rumah Tangga Lesti dan Rizky Billar, Kab...
+58           @sherpa701 Tambah 1 Om Kdrt : Rizky Billar
+59    Pake bola biliar aja. Rizky Billar jadiin mask...
 Name: tweet, dtype: object
 </pre></div>
 </div>
@@ -628,7 +990,7 @@ Requirement already satisfied: numpy in /usr/local/lib/python3.7/dist-packages (
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-44e6d680-097f-4211-bd34-eb1d90aa5ff1">
+  <div id="df-50b6eeb8-0cb4-4fba-81c8-a30d4682c264">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -956,7 +1318,7 @@ Requirement already satisfied: numpy in /usr/local/lib/python3.7/dist-packages (
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-44e6d680-097f-4211-bd34-eb1d90aa5ff1')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-50b6eeb8-0cb4-4fba-81c8-a30d4682c264')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1007,12 +1369,12 @@ Requirement already satisfied: numpy in /usr/local/lib/python3.7/dist-packages (
 
       <script>
         const buttonEl =
-          document.querySelector('#df-44e6d680-097f-4211-bd34-eb1d90aa5ff1 button.colab-df-convert');
+          document.querySelector('#df-50b6eeb8-0cb4-4fba-81c8-a30d4682c264 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-44e6d680-097f-4211-bd34-eb1d90aa5ff1');
+          const element = document.querySelector('#df-50b6eeb8-0cb4-4fba-81c8-a30d4682c264');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1042,7 +1404,40 @@ Requirement already satisfied: numpy in /usr/local/lib/python3.7/dist-packages (
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: sastrawi in /usr/local/lib/python3.7/dist-packages (1.0.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting sastrawi
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading Sastrawi-1.0.1-py2.py3-none-any.whl (209 kB)
+?25l
+     |█▋                              | 10 kB 9.6 MB/s eta 0:00:01
+     |███▏                            | 20 kB 2.7 MB/s eta 0:00:01
+     |████▊                           | 30 kB 4.0 MB/s eta 0:00:01
+     |██████▎                         | 40 kB 1.6 MB/s eta 0:00:01
+     |███████▉                        | 51 kB 1.8 MB/s eta 0:00:01
+     |█████████▍                      | 61 kB 2.1 MB/s eta 0:00:01
+     |███████████                     | 71 kB 2.2 MB/s eta 0:00:01
+     |████████████▌                   | 81 kB 2.4 MB/s eta 0:00:01
+     |██████████████                  | 92 kB 2.6 MB/s eta 0:00:01
+     |███████████████▋                | 102 kB 2.1 MB/s eta 0:00:01
+     |█████████████████▏              | 112 kB 2.1 MB/s eta 0:00:01
+     |██████████████████▊             | 122 kB 2.1 MB/s eta 0:00:01
+     |████████████████████▎           | 133 kB 2.1 MB/s eta 0:00:01
+     |█████████████████████▉          | 143 kB 2.1 MB/s eta 0:00:01
+     |███████████████████████▍        | 153 kB 2.1 MB/s eta 0:00:01
+     |█████████████████████████       | 163 kB 2.1 MB/s eta 0:00:01
+     |██████████████████████████▋     | 174 kB 2.1 MB/s eta 0:00:01
+     |████████████████████████████▏   | 184 kB 2.1 MB/s eta 0:00:01
+     |█████████████████████████████▊  | 194 kB 2.1 MB/s eta 0:00:01
+     |███████████████████████████████▎| 204 kB 2.1 MB/s eta 0:00:01
+     |████████████████████████████████| 209 kB 2.1 MB/s 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?25hInstalling collected packages: sastrawi
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed sastrawi-1.0.1
 </pre></div>
 </div>
 </div>
@@ -1056,75 +1451,214 @@ Requirement already satisfied: sastrawi in /usr/local/lib/python3.7/dist-package
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: swifter in /usr/local/lib/python3.7/dist-packages (1.3.4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting swifter
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading swifter-1.3.4.tar.gz (830 kB)
+?25l
+     |▍                               | 10 kB 23.1 MB/s eta 0:00:01
+     |▉                               | 20 kB 2.8 MB/s eta 0:00:01
+     |█▏                              | 30 kB 4.0 MB/s eta 0:00:01
+     |█▋                              | 40 kB 1.6 MB/s eta 0:00:01
+     |██                              | 51 kB 1.8 MB/s eta 0:00:01
+     |██▍                             | 61 kB 2.1 MB/s eta 0:00:01
+     |██▊                             | 71 kB 2.2 MB/s eta 0:00:01
+     |███▏                            | 81 kB 2.4 MB/s eta 0:00:01
+     |███▌                            | 92 kB 2.7 MB/s eta 0:00:01
+     |████                            | 102 kB 2.1 MB/s eta 0:00:01
+     |████▍                           | 112 kB 2.1 MB/s eta 0:00:01
+     |████▊                           | 122 kB 2.1 MB/s eta 0:00:01
+     |█████▏                          | 133 kB 2.1 MB/s eta 0:00:01
+     |█████▌                          | 143 kB 2.1 MB/s eta 0:00:01
+     |██████                          | 153 kB 2.1 MB/s eta 0:00:01
+     |██████▎                         | 163 kB 2.1 MB/s eta 0:00:01
+     |██████▊                         | 174 kB 2.1 MB/s eta 0:00:01
+     |███████                         | 184 kB 2.1 MB/s eta 0:00:01
+     |███████▌                        | 194 kB 2.1 MB/s eta 0:00:01
+     |███████▉                        | 204 kB 2.1 MB/s eta 0:00:01
+     |████████▎                       | 215 kB 2.1 MB/s eta 0:00:01
+     |████████▊                       | 225 kB 2.1 MB/s eta 0:00:01
+     |█████████                       | 235 kB 2.1 MB/s eta 0:00:01
+     |█████████▌                      | 245 kB 2.1 MB/s eta 0:00:01
+     |█████████▉                      | 256 kB 2.1 MB/s eta 0:00:01
+     |██████████▎                     | 266 kB 2.1 MB/s eta 0:00:01
+     |██████████▋                     | 276 kB 2.1 MB/s eta 0:00:01
+     |███████████                     | 286 kB 2.1 MB/s eta 0:00:01
+     |███████████▍                    | 296 kB 2.1 MB/s eta 0:00:01
+     |███████████▉                    | 307 kB 2.1 MB/s eta 0:00:01
+     |████████████▎                   | 317 kB 2.1 MB/s eta 0:00:01
+     |████████████▋                   | 327 kB 2.1 MB/s eta 0:00:01
+     |█████████████                   | 337 kB 2.1 MB/s eta 0:00:01
+     |█████████████▍                  | 348 kB 2.1 MB/s eta 0:00:01
+     |█████████████▉                  | 358 kB 2.1 MB/s eta 0:00:01
+     |██████████████▏                 | 368 kB 2.1 MB/s eta 0:00:01
+     |██████████████▋                 | 378 kB 2.1 MB/s eta 0:00:01
+     |███████████████                 | 389 kB 2.1 MB/s eta 0:00:01
+     |███████████████▍                | 399 kB 2.1 MB/s eta 0:00:01
+     |███████████████▊                | 409 kB 2.1 MB/s eta 0:00:01
+     |████████████████▏               | 419 kB 2.1 MB/s eta 0:00:01
+     |████████████████▋               | 430 kB 2.1 MB/s eta 0:00:01
+     |█████████████████               | 440 kB 2.1 MB/s eta 0:00:01
+     |█████████████████▍              | 450 kB 2.1 MB/s eta 0:00:01
+     |█████████████████▊              | 460 kB 2.1 MB/s eta 0:00:01
+     |██████████████████▏             | 471 kB 2.1 MB/s eta 0:00:01
+     |██████████████████▌             | 481 kB 2.1 MB/s eta 0:00:01
+     |███████████████████             | 491 kB 2.1 MB/s eta 0:00:01
+     |███████████████████▎            | 501 kB 2.1 MB/s eta 0:00:01
+     |███████████████████▊            | 512 kB 2.1 MB/s eta 0:00:01
+     |████████████████████▏           | 522 kB 2.1 MB/s eta 0:00:01
+     |████████████████████▌           | 532 kB 2.1 MB/s eta 0:00:01
+     |█████████████████████           | 542 kB 2.1 MB/s eta 0:00:01
+     |█████████████████████▎          | 552 kB 2.1 MB/s eta 0:00:01
+     |█████████████████████▊          | 563 kB 2.1 MB/s eta 0:00:01
+     |██████████████████████          | 573 kB 2.1 MB/s eta 0:00:01
+     |██████████████████████▌         | 583 kB 2.1 MB/s eta 0:00:01
+     |██████████████████████▉         | 593 kB 2.1 MB/s eta 0:00:01
+     |███████████████████████▎        | 604 kB 2.1 MB/s eta 0:00:01
+     |███████████████████████▋        | 614 kB 2.1 MB/s eta 0:00:01
+     |████████████████████████        | 624 kB 2.1 MB/s eta 0:00:01
+     |████████████████████████▌       | 634 kB 2.1 MB/s eta 0:00:01
+     |████████████████████████▉       | 645 kB 2.1 MB/s eta 0:00:01
+     |█████████████████████████▎      | 655 kB 2.1 MB/s eta 0:00:01
+     |█████████████████████████▋      | 665 kB 2.1 MB/s eta 0:00:01
+     |██████████████████████████      | 675 kB 2.1 MB/s eta 0:00:01
+     |██████████████████████████▍     | 686 kB 2.1 MB/s eta 0:00:01
+     |██████████████████████████▉     | 696 kB 2.1 MB/s eta 0:00:01
+     |███████████████████████████▏    | 706 kB 2.1 MB/s eta 0:00:01
+     |███████████████████████████▋    | 716 kB 2.1 MB/s eta 0:00:01
+     |████████████████████████████    | 727 kB 2.1 MB/s eta 0:00:01
+     |████████████████████████████▍   | 737 kB 2.1 MB/s eta 0:00:01
+     |████████████████████████████▉   | 747 kB 2.1 MB/s eta 0:00:01
+     |█████████████████████████████▏  | 757 kB 2.1 MB/s eta 0:00:01
+     |█████████████████████████████▋  | 768 kB 2.1 MB/s eta 0:00:01
+     |██████████████████████████████  | 778 kB 2.1 MB/s eta 0:00:01
+     |██████████████████████████████▍ | 788 kB 2.1 MB/s eta 0:00:01
+     |██████████████████████████████▊ | 798 kB 2.1 MB/s eta 0:00:01
+     |███████████████████████████████▏| 808 kB 2.1 MB/s eta 0:00:01
+     |███████████████████████████████▌| 819 kB 2.1 MB/s eta 0:00:01
+     |████████████████████████████████| 829 kB 2.1 MB/s eta 0:00:01
+     |████████████████████████████████| 830 kB 2.1 MB/s 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?25hRequirement already satisfied: pandas&gt;=1.0.0 in /usr/local/lib/python3.7/dist-packages (from swifter) (1.3.5)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting psutil&gt;=5.6.6
+  Downloading psutil-5.9.2-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (281 kB)
+?25l
+     |█▏                              | 10 kB 22.7 MB/s eta 0:00:01
+     |██▎                             | 20 kB 29.4 MB/s eta 0:00:01
+     |███▌                            | 30 kB 37.1 MB/s eta 0:00:01
+     |████▋                           | 40 kB 42.3 MB/s eta 0:00:01
+     |█████▉                          | 51 kB 44.2 MB/s eta 0:00:01
+     |███████                         | 61 kB 45.5 MB/s eta 0:00:01
+     |████████▏                       | 71 kB 47.8 MB/s eta 0:00:01
+     |█████████▎                      | 81 kB 49.1 MB/s eta 0:00:01
+     |██████████▌                     | 92 kB 51.5 MB/s eta 0:00:01
+     |███████████▋                    | 102 kB 53.5 MB/s eta 0:00:01
+     |████████████▉                   | 112 kB 53.5 MB/s eta 0:00:01
+     |██████████████                  | 122 kB 53.5 MB/s eta 0:00:01
+     |███████████████▏                | 133 kB 53.5 MB/s eta 0:00:01
+     |████████████████▎               | 143 kB 53.5 MB/s eta 0:00:01
+     |█████████████████▌              | 153 kB 53.5 MB/s eta 0:00:01
+     |██████████████████▋             | 163 kB 53.5 MB/s eta 0:00:01
+     |███████████████████▉            | 174 kB 53.5 MB/s eta 0:00:01
+     |█████████████████████           | 184 kB 53.5 MB/s eta 0:00:01
+     |██████████████████████▏         | 194 kB 53.5 MB/s eta 0:00:01
+     |███████████████████████▎        | 204 kB 53.5 MB/s eta 0:00:01
+     |████████████████████████▌       | 215 kB 53.5 MB/s eta 0:00:01
+     |█████████████████████████▋      | 225 kB 53.5 MB/s eta 0:00:01
+     |██████████████████████████▉     | 235 kB 53.5 MB/s eta 0:00:01
+     |████████████████████████████    | 245 kB 53.5 MB/s eta 0:00:01
+     |█████████████████████████████▏  | 256 kB 53.5 MB/s eta 0:00:01
+     |██████████████████████████████▎ | 266 kB 53.5 MB/s eta 0:00:01
+     |███████████████████████████████▌| 276 kB 53.5 MB/s eta 0:00:01
+     |████████████████████████████████| 281 kB 53.5 MB/s 
+?25hRequirement already satisfied: dask[dataframe]&gt;=2.10.0 in /usr/local/lib/python3.7/dist-packages (from swifter) (2022.2.0)
 Requirement already satisfied: tqdm&gt;=4.33.0 in /usr/local/lib/python3.7/dist-packages (from swifter) (4.64.1)
-Requirement already satisfied: bleach&gt;=3.1.1 in /usr/local/lib/python3.7/dist-packages (from swifter) (5.0.1)
-Requirement already satisfied: pandas&gt;=1.0.0 in /usr/local/lib/python3.7/dist-packages (from swifter) (1.3.5)
-Requirement already satisfied: dask[dataframe]&gt;=2.10.0 in /usr/local/lib/python3.7/dist-packages (from swifter) (2022.2.0)
-Requirement already satisfied: cloudpickle&gt;=0.2.2 in /usr/local/lib/python3.7/dist-packages (from swifter) (1.5.0)
 Requirement already satisfied: ipywidgets&gt;=7.0.0 in /usr/local/lib/python3.7/dist-packages (from swifter) (7.7.1)
+Requirement already satisfied: cloudpickle&gt;=0.2.2 in /usr/local/lib/python3.7/dist-packages (from swifter) (1.5.0)
 Requirement already satisfied: parso&gt;0.4.0 in /usr/local/lib/python3.7/dist-packages (from swifter) (0.8.3)
-Requirement already satisfied: psutil&gt;=5.6.6 in /usr/local/lib/python3.7/dist-packages (from swifter) (5.9.2)
+Requirement already satisfied: bleach&gt;=3.1.1 in /usr/local/lib/python3.7/dist-packages (from swifter) (5.0.1)
 Requirement already satisfied: six&gt;=1.9.0 in /usr/local/lib/python3.7/dist-packages (from bleach&gt;=3.1.1-&gt;swifter) (1.15.0)
 Requirement already satisfied: webencodings in /usr/local/lib/python3.7/dist-packages (from bleach&gt;=3.1.1-&gt;swifter) (0.5.1)
-Requirement already satisfied: toolz&gt;=0.8.2 in /usr/local/lib/python3.7/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (0.12.0)
-Requirement already satisfied: pyyaml&gt;=5.3.1 in /usr/local/lib/python3.7/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (6.0)
+Requirement already satisfied: packaging&gt;=20.0 in /usr/local/lib/python3.7/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (21.3)
 Requirement already satisfied: partd&gt;=0.3.10 in /usr/local/lib/python3.7/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (1.3.0)
 Requirement already satisfied: fsspec&gt;=0.6.0 in /usr/local/lib/python3.7/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (2022.8.2)
-Requirement already satisfied: packaging&gt;=20.0 in /usr/local/lib/python3.7/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (21.3)
+Requirement already satisfied: toolz&gt;=0.8.2 in /usr/local/lib/python3.7/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (0.12.0)
+Requirement already satisfied: pyyaml&gt;=5.3.1 in /usr/local/lib/python3.7/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (6.0)
 Requirement already satisfied: numpy&gt;=1.18 in /usr/local/lib/python3.7/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (1.21.6)
-Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in /usr/local/lib/python3.7/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (3.0.3)
 Requirement already satisfied: ipython-genutils~=0.2.0 in /usr/local/lib/python3.7/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.0)
-Requirement already satisfied: ipython&gt;=4.0.0 in /usr/local/lib/python3.7/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (7.9.0)
+Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in /usr/local/lib/python3.7/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (3.0.3)
 Requirement already satisfied: widgetsnbextension~=3.6.0 in /usr/local/lib/python3.7/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (3.6.1)
-Requirement already satisfied: ipykernel&gt;=4.5.1 in /usr/local/lib/python3.7/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (5.3.4)
 Requirement already satisfied: traitlets&gt;=4.3.1 in /usr/local/lib/python3.7/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (5.1.1)
+Requirement already satisfied: ipython&gt;=4.0.0 in /usr/local/lib/python3.7/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (7.9.0)
+Requirement already satisfied: ipykernel&gt;=4.5.1 in /usr/local/lib/python3.7/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (5.3.4)
 Requirement already satisfied: jupyter-client in /usr/local/lib/python3.7/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.1.12)
 Requirement already satisfied: tornado&gt;=4.2 in /usr/local/lib/python3.7/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.2)
-Requirement already satisfied: jedi&gt;=0.10 in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.18.1)
-Requirement already satisfied: pexpect in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.8.0)
-Requirement already satisfied: decorator in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.4.2)
-Requirement already satisfied: prompt-toolkit&lt;2.1.0,&gt;=2.0.0 in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.0.10)
 Requirement already satisfied: setuptools&gt;=18.5 in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (57.4.0)
 Requirement already satisfied: pickleshare in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.7.5)
+Requirement already satisfied: pexpect in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.8.0)
 Requirement already satisfied: pygments in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.6.1)
 Requirement already satisfied: backcall in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.0)
-Requirement already satisfied: pyparsing!=3.0.5,&gt;=2.0.2 in /usr/local/lib/python3.7/dist-packages (from packaging&gt;=20.0-&gt;dask[dataframe]&gt;=2.10.0-&gt;swifter) (3.0.9)
+Requirement already satisfied: jedi&gt;=0.10 in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.18.1)
+Requirement already satisfied: prompt-toolkit&lt;2.1.0,&gt;=2.0.0 in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.0.10)
+Requirement already satisfied: decorator in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.4.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pyparsing!=3.0.5,&gt;=2.0.2 in /usr/local/lib/python3.7/dist-packages (from packaging&gt;=20.0-&gt;dask[dataframe]&gt;=2.10.0-&gt;swifter) (3.0.9)
 Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.7/dist-packages (from pandas&gt;=1.0.0-&gt;swifter) (2022.4)
 Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.7/dist-packages (from pandas&gt;=1.0.0-&gt;swifter) (2.8.2)
 Requirement already satisfied: locket in /usr/local/lib/python3.7/dist-packages (from partd&gt;=0.3.10-&gt;dask[dataframe]&gt;=2.10.0-&gt;swifter) (1.0.0)
 Requirement already satisfied: wcwidth in /usr/local/lib/python3.7/dist-packages (from prompt-toolkit&lt;2.1.0,&gt;=2.0.0-&gt;ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.5)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: notebook&gt;=4.4.1 in /usr/local/lib/python3.7/dist-packages (from widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (5.3.1)
+Requirement already satisfied: notebook&gt;=4.4.1 in /usr/local/lib/python3.7/dist-packages (from widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (5.3.1)
 Requirement already satisfied: terminado&gt;=0.8.1 in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.13.3)
-Requirement already satisfied: nbformat in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (5.6.1)
+Requirement already satisfied: jinja2 in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.1.2)
 Requirement already satisfied: nbconvert in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.5.4)
 Requirement already satisfied: Send2Trash in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.8.0)
-Requirement already satisfied: jinja2 in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.1.2)
+Requirement already satisfied: nbformat in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (5.6.1)
 Requirement already satisfied: jupyter-core&gt;=4.4.0 in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.11.1)
 Requirement already satisfied: pyzmq&gt;=13 in /usr/local/lib/python3.7/dist-packages (from jupyter-client-&gt;ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (23.2.1)
 Requirement already satisfied: ptyprocess in /usr/local/lib/python3.7/dist-packages (from terminado&gt;=0.8.1-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.7.0)
 Requirement already satisfied: MarkupSafe&gt;=2.0 in /usr/local/lib/python3.7/dist-packages (from jinja2-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.0.1)
-Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.6.3)
-Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.8.4)
-Requirement already satisfied: entrypoints&gt;=0.2.2 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.4)
-Requirement already satisfied: nbclient&gt;=0.5.0 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.5.13)
 Requirement already satisfied: defusedxml in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.7.1)
 Requirement already satisfied: jupyterlab-pygments in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.2)
-Requirement already satisfied: lxml in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.9.1)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.6.3)
+Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.8.4)
 Requirement already satisfied: pandocfilters&gt;=1.4.1 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.5.0)
+Requirement already satisfied: lxml in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.9.1)
 Requirement already satisfied: tinycss2 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.1.1)
-Requirement already satisfied: nest-asyncio in /usr/local/lib/python3.7/dist-packages (from nbclient&gt;=0.5.0-&gt;nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.5.6)
-Requirement already satisfied: importlib-metadata&gt;=3.6 in /usr/local/lib/python3.7/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (5.0.0)
-Requirement already satisfied: jsonschema&gt;=2.6 in /usr/local/lib/python3.7/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.2.0)
-Requirement already satisfied: fastjsonschema in /usr/local/lib/python3.7/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.16.2)
+Requirement already satisfied: entrypoints&gt;=0.2.2 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.4)
+Requirement already satisfied: nbclient&gt;=0.5.0 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.5.13)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: typing-extensions&gt;=3.6.4 in /usr/local/lib/python3.7/dist-packages (from importlib-metadata&gt;=3.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.1.1)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: nest-asyncio in /usr/local/lib/python3.7/dist-packages (from nbclient&gt;=0.5.0-&gt;nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.5.6)
+Requirement already satisfied: jsonschema&gt;=2.6 in /usr/local/lib/python3.7/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.2.0)
+Requirement already satisfied: importlib-metadata&gt;=3.6 in /usr/local/lib/python3.7/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (5.0.0)
+Requirement already satisfied: fastjsonschema in /usr/local/lib/python3.7/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.16.2)
+Requirement already satisfied: typing-extensions&gt;=3.6.4 in /usr/local/lib/python3.7/dist-packages (from importlib-metadata&gt;=3.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.1.1)
 Requirement already satisfied: zipp&gt;=0.5 in /usr/local/lib/python3.7/dist-packages (from importlib-metadata&gt;=3.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.8.1)
 Requirement already satisfied: pyrsistent&gt;=0.14.0 in /usr/local/lib/python3.7/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.18.1)
 Requirement already satisfied: attrs&gt;=17.4.0 in /usr/local/lib/python3.7/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (21.4.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Building wheels for collected packages: swifter
+  Building wheel for swifter (setup.py) ... ?25l?25hdone
+  Created wheel for swifter: filename=swifter-1.3.4-py3-none-any.whl size=16322 sha256=8b41ab41f8c03122177dcfe5c126153eb182e177442a2cf9f398ac9607c0fb85
+  Stored in directory: /root/.cache/pip/wheels/29/a7/0e/3a8f17ac69d759e1e93647114bc9bdc95957e5b0cbfd405205
+Successfully built swifter
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: psutil, swifter
+  Attempting uninstall: psutil
+    Found existing installation: psutil 5.4.8
+    Uninstalling psutil-5.4.8:
+      Successfully uninstalled psutil-5.4.8
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed psutil-5.9.2 swifter-1.3.4
 </pre></div>
 </div>
 </div>
@@ -1214,10 +1748,10 @@ Name: tweet, dtype: object
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Requirement already satisfied: nltk in /usr/local/lib/python3.7/dist-packages (3.7)
-Requirement already satisfied: tqdm in /usr/local/lib/python3.7/dist-packages (from nltk) (4.64.1)
-Requirement already satisfied: joblib in /usr/local/lib/python3.7/dist-packages (from nltk) (1.2.0)
-Requirement already satisfied: regex&gt;=2021.8.3 in /usr/local/lib/python3.7/dist-packages (from nltk) (2022.6.2)
 Requirement already satisfied: click in /usr/local/lib/python3.7/dist-packages (from nltk) (7.1.2)
+Requirement already satisfied: regex&gt;=2021.8.3 in /usr/local/lib/python3.7/dist-packages (from nltk) (2022.6.2)
+Requirement already satisfied: joblib in /usr/local/lib/python3.7/dist-packages (from nltk) (1.2.0)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.7/dist-packages (from nltk) (4.64.1)
 </pre></div>
 </div>
 </div>
@@ -1638,7 +2172,9 @@ Name: tweet, dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package punkt to /root/nltk_data...
-[nltk_data]   Package punkt is already up-to-date!
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]   Unzipping tokenizers/punkt.zip.
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
@@ -1733,7 +2269,7 @@ Name: tweet, dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /root/nltk_data...
-[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data]   Unzipping corpora/stopwords.zip.
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
@@ -1874,10 +2410,10 @@ rizky : rizky
 isu : isu
 perselingkuhan : selingkuh
 dugaan : duga
-kdrt : kdrt
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>menimpanya : timpa
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>kdrt : kdrt
+menimpanya : timpa
 netizen : netizen
 </pre></div>
 </div>
@@ -1891,10 +2427,10 @@ keterangan : terang
 saksi : saksi
 kuasa : kuasa
 hukum : hukum
+menyesal : sesal
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>menyesal : sesal
-bersalah : salah
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bersalah : salah
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>lesti : lesti
@@ -1970,13 +2506,15 @@ mah : mah
 aja : aja
 biar : biar
 kalo : kalo
-gabisa : gabisa
-diatur : atur
-langsung : langsung
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>choke : choke
-slam : slam
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gabisa : gabisa
+diatur : atur
+langsung : langsung
+choke : choke
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>slam : slam
 momen : momen
 lempar : lempar
 bola : bola
@@ -1985,37 +2523,37 @@ gundulmu : gundul
 nama : nama
 tercoreng : coreng
 kubu : kubu
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>perlindungan : lindung
+perlindungan : lindung
 presiden : presiden
-amputmmediumsocialamputmsourcetwitter : amputmmediumsocialamputmsourcetwitter
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>wish : wish
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>amputmmediumsocialamputmsourcetwitter : amputmmediumsocialamputmsourcetwitter
+wish : wish
 you : you
 rot : rot
 in : in
-hell : hell
-buset : buset
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>like : like
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hell : hell
+buset : buset
+like : like
 video : video
 mesum : mesum
-twitter : twitter
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>suarafresh : suarafresh
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>twitter : twitter
+suarafresh : suarafresh
 kabar : kabar
 terbaru : baru
 keberadaan : ada
-penjaga : jaga
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>leslar : leslar
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>penjaga : jaga
+leslar : leslar
 nih : nih
-awikwok : awikwok
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>awikwok : awikwok
 banget : banget
 dituding : tuding
 anak : anak
@@ -2045,27 +2583,25 @@ oktober : oktober
 gak : gak
 yg : yg
 ga : ga
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>melewati : lewat
+melewati : lewat
 privasinya : privasi
-ngecek : ngecek
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sebates : sebates
-pgen : pgen
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ngecek : ngecek
+sebates : sebates
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pgen : pgen
 tau : tau
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>apkh : apkh
+apkh : apkh
 ad : ad
 indikasi : indikasi
 masuk : masuk
 komunitas : komunitas
-lovers : lovers
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nggk : nggk
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>lovers : lovers
+nggk : nggk
 layangkan : layang
 diatap : atap
 lo : lo
@@ -2083,12 +2619,15 @@ badut : badut
 pala : pala
 gede : gede
 alias : alias
-omongan : omong
-doang : doang
+omongan : 
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bgst : bgst
-tbtb : tbtb
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>omong
+doang : doang
+bgst : bgst
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tbtb : tbtb
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nanya : nanya
@@ -2096,21 +2635,22 @@ dek : dek
 meninggal : tinggal
 berita : berita
 tiktok : tiktok
-dipercaya : percaya
+dipercaya :
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>cctv : cctv
-ngamuk : ngamuk
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> percaya
+cctv : cctv
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ngamuk : ngamuk
 terungkap : ungkap
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>skakmat : skakmat
+skakmat : skakmat
 beredar : edar
-instagram : instagram
-diduga : duga
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>berselingkuh : selingkuh
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>instagram : instagram
+diduga : duga
+berselingkuh : selingkuh
 wanita : wanita
 selingkuhannya : selingkuh
 </pre></div>
@@ -2147,21 +2687,24 @@ viral : viral
 cicilan : cicil
 kapal : kapal
 pesiar : pesiar
-mewah : mewah
+mewah :
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>terungkapskakmat : terungkapskakmat
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> mewah
+terungkapskakmat : terungkapskakmat
 janji : janji
 lindungi : lindung
 bersikap : sikap
-berhubungan : hubung
-intim : intim
-heboh : heboh
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>isukdrt : isukdrt
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>berhubungan : hubung
+intim : intim
+heboh : heboh
+isukdrt : isukdrt
 pernyataan : nyata
-pengacara : acara
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pengacara : acara
 tepis : tepis
 melaporkan : lapor
 berwajib : wajib
@@ -2179,13 +2722,11 @@ dengerin : dengerin
 kedapatan : dapat
 jempol : jempol
 sepasang : pasang
+kekasih : kasih
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>kekasih : kasih
-makassar : makassar
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>october : october
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>makassar : makassar
+october : october
 at : at
 pm : pm
 hubungan : hubung
@@ -2260,7 +2801,7 @@ yaudah : yaudah
 </pre></div>
 </div>
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "ccc53e61d566493bbbfdab1d70c474ff"}
+{"version_major": 2, "version_minor": 0, "model_id": "9aca7cde62ca48b39ecb4f725a06fefb"}
 </script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     [laku, artis, rizky, billar, isu, selingkuh, d...
 1     [polisi, rizky, billar, kooperatif, penuh, pan...
 2           [kuasa, hukum, rizky, billar, sesal, salah]
@@ -2346,7 +2887,7 @@ Name: tweet, dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a9a36149-5cd9-42a0-abed-577e21c5b1ce">
+  <div id="df-cb45f703-e4d9-4920-b9a3-4cc9923eceac">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2735,7 +3276,7 @@ Name: tweet, dtype: object
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-a9a36149-5cd9-42a0-abed-577e21c5b1ce')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-cb45f703-e4d9-4920-b9a3-4cc9923eceac')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2786,12 +3327,12 @@ Name: tweet, dtype: object
 
       <script>
         const buttonEl =
-          document.querySelector('#df-a9a36149-5cd9-42a0-abed-577e21c5b1ce button.colab-df-convert');
+          document.querySelector('#df-cb45f703-e4d9-4920-b9a3-4cc9923eceac button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-a9a36149-5cd9-42a0-abed-577e21c5b1ce');
+          const element = document.querySelector('#df-cb45f703-e4d9-4920-b9a3-4cc9923eceac');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2871,7 +3412,7 @@ Name: tweet, dtype: object
 </pre></div>
 </div>
 <div class="output text_html">
-  <div id="df-84d61721-1043-4589-8a8a-b60b0fdcb8ff">
+  <div id="df-585c697f-b9e2-4ac5-864a-56d178b16dc5">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -4359,7 +4900,7 @@ Name: tweet, dtype: object
 </table>
 <p>60 rows × 272 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-84d61721-1043-4589-8a8a-b60b0fdcb8ff')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-585c697f-b9e2-4ac5-864a-56d178b16dc5')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -4410,12 +4951,12 @@ Name: tweet, dtype: object
 
       <script>
         const buttonEl =
-          document.querySelector('#df-84d61721-1043-4589-8a8a-b60b0fdcb8ff button.colab-df-convert');
+          document.querySelector('#df-585c697f-b9e2-4ac5-864a-56d178b16dc5 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-84d61721-1043-4589-8a8a-b60b0fdcb8ff');
+          const element = document.querySelector('#df-585c697f-b9e2-4ac5-864a-56d178b16dc5');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -4453,7 +4994,7 @@ Name: tweet, dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-70a05a9b-c554-4f99-a91f-8ce08bee59c1">
+  <div id="df-8fb29e48-83e5-4f21-9d7e-0161c1d1e707">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -4491,11 +5032,11 @@ Name: tweet, dtype: object
     </tr>
     <tr>
       <th>3</th>
-      <td>2</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>5</th>
@@ -4507,7 +5048,7 @@ Name: tweet, dtype: object
     </tr>
     <tr>
       <th>7</th>
-      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>8</th>
@@ -4519,7 +5060,7 @@ Name: tweet, dtype: object
     </tr>
     <tr>
       <th>10</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>11</th>
@@ -4531,7 +5072,7 @@ Name: tweet, dtype: object
     </tr>
     <tr>
       <th>13</th>
-      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>14</th>
@@ -4559,7 +5100,7 @@ Name: tweet, dtype: object
     </tr>
     <tr>
       <th>20</th>
-      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>21</th>
@@ -4583,11 +5124,11 @@ Name: tweet, dtype: object
     </tr>
     <tr>
       <th>26</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>27</th>
-      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>28</th>
@@ -4611,7 +5152,7 @@ Name: tweet, dtype: object
     </tr>
     <tr>
       <th>33</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>34</th>
@@ -4623,7 +5164,7 @@ Name: tweet, dtype: object
     </tr>
     <tr>
       <th>36</th>
-      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>37</th>
@@ -4631,7 +5172,7 @@ Name: tweet, dtype: object
     </tr>
     <tr>
       <th>38</th>
-      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>39</th>
@@ -4647,19 +5188,19 @@ Name: tweet, dtype: object
     </tr>
     <tr>
       <th>42</th>
-      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>43</th>
-      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>44</th>
-      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>45</th>
-      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>46</th>
@@ -4667,7 +5208,7 @@ Name: tweet, dtype: object
     </tr>
     <tr>
       <th>47</th>
-      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>48</th>
@@ -4675,7 +5216,7 @@ Name: tweet, dtype: object
     </tr>
     <tr>
       <th>49</th>
-      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>50</th>
@@ -4687,19 +5228,19 @@ Name: tweet, dtype: object
     </tr>
     <tr>
       <th>52</th>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>53</th>
       <td>1</td>
     </tr>
     <tr>
+      <th>53</th>
+      <td>0</td>
+    </tr>
+    <tr>
       <th>54</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>55</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>56</th>
@@ -4715,12 +5256,12 @@ Name: tweet, dtype: object
     </tr>
     <tr>
       <th>59</th>
-      <td>1</td>
+      <td>2</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-70a05a9b-c554-4f99-a91f-8ce08bee59c1')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-8fb29e48-83e5-4f21-9d7e-0161c1d1e707')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -4771,12 +5312,12 @@ Name: tweet, dtype: object
 
       <script>
         const buttonEl =
-          document.querySelector('#df-70a05a9b-c554-4f99-a91f-8ce08bee59c1 button.colab-df-convert');
+          document.querySelector('#df-8fb29e48-83e5-4f21-9d7e-0161c1d1e707 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-70a05a9b-c554-4f99-a91f-8ce08bee59c1');
+          const element = document.querySelector('#df-8fb29e48-83e5-4f21-9d7e-0161c1d1e707');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -4807,7 +5348,7 @@ Name: tweet, dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a5c4e864-2e87-4265-955a-c7919839e363">
+  <div id="df-2e6de4ee-959e-4891-a399-0dc1583500e0">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -6295,7 +6836,7 @@ Name: tweet, dtype: object
 </table>
 <p>60 rows × 273 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-a5c4e864-2e87-4265-955a-c7919839e363')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-2e6de4ee-959e-4891-a399-0dc1583500e0')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -6346,12 +6887,12 @@ Name: tweet, dtype: object
 
       <script>
         const buttonEl =
-          document.querySelector('#df-a5c4e864-2e87-4265-955a-c7919839e363 button.colab-df-convert');
+          document.querySelector('#df-2e6de4ee-959e-4891-a399-0dc1583500e0 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-a5c4e864-2e87-4265-955a-c7919839e363');
+          const element = document.querySelector('#df-2e6de4ee-959e-4891-a399-0dc1583500e0');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -6420,7 +6961,7 @@ memory usage: 128.1+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-c457251a-07a3-4e26-94c4-d1ad45512123">
+  <div id="df-6f4c192b-8b6e-4527-a03e-3554a9a4f15f">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -7476,7 +8017,7 @@ memory usage: 128.1+ KB
 </table>
 <p>42 rows × 272 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-c457251a-07a3-4e26-94c4-d1ad45512123')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-6f4c192b-8b6e-4527-a03e-3554a9a4f15f')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -7527,12 +8068,12 @@ memory usage: 128.1+ KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-c457251a-07a3-4e26-94c4-d1ad45512123 button.colab-df-convert');
+          document.querySelector('#df-6f4c192b-8b6e-4527-a03e-3554a9a4f15f button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-c457251a-07a3-4e26-94c4-d1ad45512123');
+          const element = document.querySelector('#df-6f4c192b-8b6e-4527-a03e-3554a9a4f15f');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -7729,74 +8270,61 @@ Name: label, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3.30183616e-02, 4.73873920e-02, 0.00000000e+00, 7.67908589e-02,
-       0.00000000e+00, 1.31012271e-03, 1.51112899e-01, 0.00000000e+00,
-       0.00000000e+00, 0.00000000e+00, 6.50192311e-02, 3.07035467e-02,
-       5.76313147e-02, 0.00000000e+00, 5.39453182e-02, 0.00000000e+00,
-       0.00000000e+00, 1.18486993e-01, 2.01521175e-02, 0.00000000e+00,
-       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
-       0.00000000e+00, 3.50583190e-02, 6.03142799e-02, 2.04590954e-02,
-       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
-       7.73571577e-02, 6.56705639e-02, 1.49161595e-02, 0.00000000e+00,
-       3.15349904e-02, 6.88357188e-02, 2.56289917e-02, 0.00000000e+00,
-       0.00000000e+00, 3.56071749e-02, 2.43259957e-02, 5.41915667e-02,
-       0.00000000e+00, 4.72379383e-02, 0.00000000e+00, 4.17665578e-02,
-       5.88781499e-02, 0.00000000e+00, 2.02336543e-01, 0.00000000e+00,
-       0.00000000e+00, 7.46210564e-03, 0.00000000e+00, 1.45273288e-02,
-       0.00000000e+00, 0.00000000e+00, 2.82744943e-02, 0.00000000e+00,
-       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 7.82083567e-02,
-       3.16758549e-02, 1.39343886e-03, 1.21793872e-01, 0.00000000e+00,
-       0.00000000e+00, 0.00000000e+00, 1.00431438e-01, 1.22036604e-02,
-       4.26813176e-02, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
-       3.78272432e-02, 2.03379864e-02, 0.00000000e+00, 0.00000000e+00,
-       0.00000000e+00, 2.08567798e-02, 0.00000000e+00, 1.95307924e-01,
-       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
-       1.76838944e-02, 1.54632830e-03, 8.56833553e-02, 1.07534784e-01,
-       3.56361142e-02, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
-       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
-       5.13762603e-02, 1.68448342e-01, 9.18988329e-02, 1.73683517e-01,
-       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 9.89572507e-02,
-       1.02098016e-01, 4.84911163e-02, 0.00000000e+00, 1.97977198e-02,
-       1.27510627e-02, 0.00000000e+00, 1.83750538e-03, 6.28369557e-02,
-       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
-       0.00000000e+00, 1.58879339e-01, 0.00000000e+00, 5.22833558e-02,
-       0.00000000e+00, 0.00000000e+00, 4.07633282e-02, 5.08136518e-02,
-       0.00000000e+00, 4.98834409e-02, 0.00000000e+00, 0.00000000e+00,
-       0.00000000e+00, 1.06730481e-02, 0.00000000e+00, 0.00000000e+00,
-       8.74587479e-03, 6.88411930e-02, 0.00000000e+00, 0.00000000e+00,
-       1.06696205e-01, 1.57439411e-04, 0.00000000e+00, 0.00000000e+00,
-       0.00000000e+00, 1.33566080e-02, 0.00000000e+00, 0.00000000e+00,
-       1.37287241e-01, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
-       0.00000000e+00, 0.00000000e+00, 6.50667365e-02, 5.95289541e-02,
-       1.21901818e-02, 0.00000000e+00, 5.33868392e-02, 0.00000000e+00,
-       5.74025092e-02, 0.00000000e+00, 0.00000000e+00, 4.20986992e-02,
-       0.00000000e+00, 0.00000000e+00, 5.60694507e-02, 5.72244319e-03,
-       0.00000000e+00, 5.41818541e-02, 0.00000000e+00, 0.00000000e+00,
-       1.54811223e-03, 1.31062910e-01, 0.00000000e+00, 0.00000000e+00,
-       2.05166437e-02, 0.00000000e+00, 3.72712515e-02, 0.00000000e+00,
-       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 1.18127800e-01,
-       0.00000000e+00, 0.00000000e+00, 7.66399516e-02, 2.98059655e-02,
-       0.00000000e+00, 6.65294933e-02, 0.00000000e+00, 2.54217254e-02,
-       0.00000000e+00, 0.00000000e+00, 5.06553542e-02, 1.29267417e-01,
-       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
-       6.00402814e-02, 0.00000000e+00, 7.01513198e-03, 2.14177267e-02,
-       0.00000000e+00, 0.00000000e+00, 1.45678981e-01, 9.12504452e-04,
-       1.88726528e-02, 0.00000000e+00, 5.57877218e-02, 5.03933807e-02,
-       0.00000000e+00, 1.10342360e-01, 1.16219420e-01, 0.00000000e+00,
-       4.89492561e-02, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
-       0.00000000e+00, 1.12771398e-02, 7.15757037e-02, 1.01432788e-01,
-       3.72139675e-02, 1.72484172e-02, 1.46633252e-01, 0.00000000e+00,
-       7.31833553e-02, 0.00000000e+00, 3.10534614e-02, 0.00000000e+00,
-       9.71133935e-02, 0.00000000e+00, 2.97734913e-02, 0.00000000e+00,
-       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 1.35636100e-02,
-       1.53991700e-01, 0.00000000e+00, 3.02781124e-02, 0.00000000e+00,
-       2.55558093e-01, 0.00000000e+00, 1.10390385e-01, 0.00000000e+00,
-       0.00000000e+00, 3.58714463e-03, 0.00000000e+00, 1.86204197e-01,
-       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
-       3.78360967e-02, 0.00000000e+00, 9.06773362e-02, 6.13516024e-02,
-       5.60625792e-02, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
-       3.62591023e-02, 2.29282533e-02, 0.00000000e+00, 0.00000000e+00,
-       0.00000000e+00, 1.24712514e-01, 7.40431437e-02, 1.16389488e-01])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.        , 0.03668427, 0.        , 0.03208186, 0.        ,
+       0.        , 0.        , 0.        , 0.00686568, 0.        ,
+       0.04800153, 0.01784451, 0.        , 0.        , 0.        ,
+       0.        , 0.        , 0.1361744 , 0.        , 0.15656531,
+       0.03551507, 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.        , 0.03062796, 0.        , 0.        ,
+       0.        , 0.08983998, 0.        , 0.        , 0.09923211,
+       0.07864383, 0.        , 0.02167138, 0.        , 0.        ,
+       0.01679576, 0.        , 0.0992029 , 0.        , 0.03106258,
+       0.04615318, 0.        , 0.        , 0.        , 0.01225031,
+       0.        , 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.        , 0.01298641, 0.04203884, 0.        ,
+       0.        , 0.        , 0.        , 0.10606292, 0.        ,
+       0.        , 0.        , 0.        , 0.        , 0.05645828,
+       0.        , 0.05733465, 0.        , 0.        , 0.06707723,
+       0.02983259, 0.        , 0.01340385, 0.        , 0.02504406,
+       0.10791417, 0.12477244, 0.        , 0.0437421 , 0.        ,
+       0.        , 0.        , 0.04480974, 0.        , 0.02209509,
+       0.        , 0.        , 0.02056448, 0.        , 0.        ,
+       0.00330198, 0.02460687, 0.        , 0.0825554 , 0.        ,
+       0.        , 0.        , 0.        , 0.03567245, 0.        ,
+       0.23641087, 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.        , 0.        , 0.00597755, 0.        ,
+       0.        , 0.        , 0.11128573, 0.03177034, 0.02210368,
+       0.05080937, 0.        , 0.05921888, 0.        , 0.        ,
+       0.        , 0.12567597, 0.02077157, 0.        , 0.        ,
+       0.13981078, 0.03413153, 0.13829734, 0.        , 0.03832156,
+       0.        , 0.05172327, 0.        , 0.08971894, 0.06942065,
+       0.        , 0.03683432, 0.12675333, 0.01947906, 0.        ,
+       0.11260049, 0.04783318, 0.03907527, 0.06721835, 0.23943371,
+       0.        , 0.        , 0.14687864, 0.        , 0.06831607,
+       0.        , 0.        , 0.        , 0.        , 0.        ,
+       0.02123537, 0.00990715, 0.07030105, 0.03534262, 0.        ,
+       0.        , 0.01007807, 0.02398586, 0.07948188, 0.01371478,
+       0.05109281, 0.06183459, 0.01980948, 0.        , 0.06598321,
+       0.        , 0.        , 0.        , 0.        , 0.        ,
+       0.0771339 , 0.0948003 , 0.        , 0.01879621, 0.        ,
+       0.08025003, 0.14219318, 0.        , 0.0789923 , 0.15711193,
+       0.        , 0.1080553 , 0.        , 0.        , 0.        ,
+       0.07120927, 0.01848613, 0.01485062, 0.00028971, 0.13300891,
+       0.07224653, 0.07075457, 0.03725117, 0.        , 0.        ,
+       0.02196368, 0.        , 0.06998014, 0.        , 0.24142642,
+       0.021757  , 0.05273509, 0.        , 0.        , 0.00193371,
+       0.        , 0.        , 0.        , 0.05017607, 0.09440777,
+       0.        , 0.16232708, 0.04344894, 0.0651887 , 0.08731704,
+       0.        , 0.        , 0.08133572, 0.        , 0.        ,
+       0.        , 0.        , 0.        , 0.        , 0.04523406,
+       0.00972023, 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.        , 0.06089062, 0.        , 0.        ,
+       0.1067334 , 0.06640957, 0.        , 0.06449039, 0.22354212,
+       0.        , 0.12157656, 0.07888311, 0.        , 0.        ,
+       0.08285834, 0.        , 0.        , 0.07088744, 0.        ,
+       0.        , 0.09650217])
 </pre></div>
 </div>
 </div>
@@ -7810,17 +8338,17 @@ Name: label, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(terang,)       0.255558
-(cicil,)        0.202337
-(harta,)        0.195308
-(tinggal,)      0.186204
-(jadwal,)       0.173684
-                  ...   
-(daratista,)    0.000000
-(marah,)        0.000000
-(dalam,)        0.000000
-(mbappe,)       0.000000
-(october,)      0.000000
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(rizkybillar,)    0.241426
+(lu,)             0.239434
+(jalin,)          0.236411
+(ungkap,)         0.223542
+(sebates,)        0.162327
+                    ...   
+(lewat,)          0.000000
+(buka,)           0.000000
+(bola,)           0.000000
+(lucinta,)        0.000000
+(abbas,)          0.000000
 Length: 272, dtype: float64
 </pre></div>
 </div>
@@ -7834,7 +8362,7 @@ Length: 272, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fdb58476c90&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f4b93e8a710&gt;
 </pre></div>
 </div>
 <img alt="_images/crawlingdata_53_1.png" src="_images/crawlingdata_53_1.png" />
@@ -7857,40 +8385,40 @@ Length: 272, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([              (&#39;ad&#39;,),              (&#39;aku&#39;,),        (&#39;apartemen&#39;,),
-                (&#39;armando&#39;,),             (&#39;atur&#39;,),              (&#39;ayu&#39;,),
-              (&#39;banaspati&#39;,),             (&#39;baru&#39;,),             (&#39;bgst&#39;,),
-                  (&#39;cekal&#39;,),            (&#39;depok&#39;,),         (&#39;detikcom&#39;,),
-                   (&#39;diam&#39;,),            (&#39;doang&#39;,),             (&#39;edar&#39;,),
-              (&#39;eksklusif&#39;,),           (&#39;farhat&#39;,),             (&#39;foto&#39;,),
-                     (&#39;ga&#39;,),           (&#39;gabisa&#39;,),     (&#39;gelenggeleng&#39;,),
-           (&#39;habishabisan&#39;,),            (&#39;hajar&#39;,),            (&#39;harta&#39;,),
-                    (&#39;hih&#39;,),           (&#39;hubung&#39;,),            (&#39;hukum&#39;,),
-                    (&#39;iis&#39;,),         (&#39;indikasi&#39;,),        (&#39;instagram&#39;,),
-                  (&#39;intip&#39;,),               (&#39;io&#39;,),              (&#39;isu&#39;,),
-                (&#39;isukdrt&#39;,),         (&#39;itusalah&#39;,),            (&#39;kapal&#39;,),
-                  (&#39;kasih&#39;,),             (&#39;kaya&#39;,),             (&#39;kdrt&#39;,),
-                 (&#39;kepala&#39;,),          (&#39;khianat&#39;,),             (&#39;kini&#39;,),
-                (&#39;kontrak&#39;,),             (&#39;kubu&#39;,),            (&#39;lapor&#39;,),
-                 (&#39;leslar&#39;,),            (&#39;lesti&#39;,),              (&#39;mah&#39;,),
-                  (&#39;mewah&#39;,),             (&#39;moga&#39;,),             (&#39;nama&#39;,),
-                (&#39;netizen&#39;,),           (&#39;ngamuk&#39;,),           (&#39;ngecek&#39;,),
-                   (&#39;nggk&#39;,),              (&#39;nih&#39;,),          (&#39;october&#39;,),
-                   (&#39;okky&#39;,),      (&#39;oktoberduit&#39;,),             (&#39;pala&#39;,),
-                  (&#39;pamer&#39;,),           (&#39;pasang&#39;,),            (&#39;penuh&#39;,),
-                (&#39;percaya&#39;,),           (&#39;pesiar&#39;,),           (&#39;polisi&#39;,),
-              (&#39;postingan&#39;,),          (&#39;pribadi&#39;,),          (&#39;privasi&#39;,),
-                (&#39;program&#39;,),            (&#39;raffi&#39;,),          (&#39;rahasia&#39;,),
-                 (&#39;rektor&#39;,),            (&#39;rizky&#39;,),      (&#39;rizkybillar&#39;,),
-                    (&#39;rot&#39;,),               (&#39;rp&#39;,),           (&#39;sangka&#39;,),
-                (&#39;sebates&#39;,),            (&#39;seleb&#39;,),          (&#39;sepenuh&#39;,),
-                  (&#39;sikap&#39;,),          (&#39;skakmat&#39;,),              (&#39;smp&#39;,),
-                  (&#39;sosok&#39;,),             (&#39;syok&#39;,),          (&#39;tanggap&#39;,),
-                (&#39;telepon&#39;,),            (&#39;tepis&#39;,), (&#39;terungkapskakmat&#39;,),
-                  (&#39;tmbah&#39;,),            (&#39;tubuh&#39;,),           (&#39;tuding&#39;,),
-                     (&#39;tv&#39;,),           (&#39;ungkap&#39;,),            (&#39;video&#39;,),
-                 (&#39;windah&#39;,),           (&#39;yaudah&#39;,),               (&#39;yg&#39;,),
-                (&#39;youtube&#39;,)],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([           (&#39;acara&#39;,),              (&#39;ada&#39;,),              (&#39;aku&#39;,),
+                     (&#39;at&#39;,),             (&#39;ayah&#39;,),              (&#39;ayu&#39;,),
+                  (&#39;badut&#39;,),        (&#39;banaspati&#39;,),           (&#39;bareng&#39;,),
+                   (&#39;baru&#39;,),             (&#39;bela&#39;,),           (&#39;benalu&#39;,),
+                  (&#39;bilar&#39;,),             (&#39;bola&#39;,),          (&#39;bongkar&#39;,),
+                   (&#39;buka&#39;,),             (&#39;cctv&#39;,),           (&#39;dahlia&#39;,),
+                  (&#39;dalam&#39;,),         (&#39;dengerin&#39;,),            (&#39;depok&#39;,),
+               (&#39;detikcom&#39;,),  (&#39;dibesarbesarkan&#39;,),             (&#39;done&#39;,),
+                   (&#39;duga&#39;,),             (&#39;edar&#39;,),           (&#39;enggan&#39;,),
+                  (&#39;fakta&#39;,),           (&#39;farhat&#39;,),             (&#39;gede&#39;,),
+                   (&#39;gitu&#39;,),     (&#39;habishabisan&#39;,),            (&#39;hajar&#39;,),
+                  (&#39;harta&#39;,),             (&#39;hell&#39;,),           (&#39;idzhar&#39;,),
+                  (&#39;intip&#39;,),         (&#39;itusalah&#39;,),           (&#39;jadwal&#39;,),
+                  (&#39;jelas&#39;,),           (&#39;jempol&#39;,),            (&#39;kabar&#39;,),
+                  (&#39;karna&#39;,),         (&#39;kesambet&#39;,),            (&#39;kevin&#39;,),
+                   (&#39;kini&#39;,),            (&#39;kirim&#39;,),         (&#39;komentar&#39;,),
+                (&#39;kondisi&#39;,),             (&#39;kubu&#39;,),           (&#39;layang&#39;,),
+                 (&#39;lempar&#39;,),            (&#39;lesti&#39;,),           (&#39;lovers&#39;,),
+                     (&#39;lu&#39;,),             (&#39;luna&#39;,),              (&#39;mah&#39;,),
+               (&#39;makassar&#39;,),            (&#39;momen&#39;,),            (&#39;mulia&#39;,),
+                   (&#39;nama&#39;,),           (&#39;ngecek&#39;,),              (&#39;nih&#39;,),
+                  (&#39;nyata&#39;,),          (&#39;october&#39;,),             (&#39;okky&#39;,),
+                (&#39;oktober&#39;,),            (&#39;omong&#39;,),            (&#39;orang&#39;,),
+                  (&#39;pecat&#39;,),               (&#39;pm&#39;,),           (&#39;polisi&#39;,),
+                  (&#39;raffi&#39;,),            (&#39;rekam&#39;,),            (&#39;rumah&#39;,),
+                  (&#39;saksi&#39;,),            (&#39;sasar&#39;,),            (&#39;seleb&#39;,),
+                    (&#39;sih&#39;,),            (&#39;sikap&#39;,),          (&#39;skakmat&#39;,),
+                   (&#39;syok&#39;,),           (&#39;tangga&#39;,),             (&#39;tbtb&#39;,),
+               (&#39;temennya&#39;,), (&#39;terputuskeduanya&#39;,),           (&#39;thalia&#39;,),
+                 (&#39;tiktok&#39;,),            (&#39;timpa&#39;,),            (&#39;tmbah&#39;,),
+                  (&#39;tubuh&#39;,),          (&#39;twitter&#39;,),            (&#39;video&#39;,),
+                  (&#39;viral&#39;,),         (&#39;wilendra&#39;,),           (&#39;windah&#39;,),
+                   (&#39;wish&#39;,),               (&#39;ya&#39;,),               (&#39;yg&#39;,),
+                    (&#39;you&#39;,)],
       dtype=&#39;object&#39;)
 </pre></div>
 </div>
@@ -7900,7 +8428,7 @@ Length: 272, dtype: float64
 
 
 <script type="application/vnd.jupyter.widget-state+json">
-{"state": {"5c949fe3ffe1499c8e771adad3491ee2": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "f7909e39979c460fab47af61bcec6e71": {"model_name": "ProgressStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "ProgressStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "bar_color": null, "description_width": ""}}, "1a9ea2c698c64795996e4b6c76b907c5": {"model_name": "FloatProgressModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatProgressModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "ProgressView", "bar_style": "success", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_5c949fe3ffe1499c8e771adad3491ee2", "max": 60.0, "min": 0.0, "orientation": "horizontal", "style": "IPY_MODEL_f7909e39979c460fab47af61bcec6e71", "value": 60.0}}, "f738af107dfd4503baa56988d24df9a2": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "54731ec8a3aa44deaaa2bb22836bb262": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "2288d4e2329745c4a9ed85aa78115c1a": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HTMLView", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_f738af107dfd4503baa56988d24df9a2", "placeholder": "\u200b", "style": "IPY_MODEL_54731ec8a3aa44deaaa2bb22836bb262", "value": "Pandas Apply: 100%"}}, "f7cea00a6de940d7a889868cdd004e2b": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "96f4ed2e0c1944038ec85272caea6403": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "5f7c6dc355bb4a39a3b34ac9fd2eebea": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HTMLView", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_f7cea00a6de940d7a889868cdd004e2b", "placeholder": "\u200b", "style": "IPY_MODEL_96f4ed2e0c1944038ec85272caea6403", "value": " 60/60 [00:00&lt;00:00, 2043.29it/s]"}}, "b139dd67c55a41b38dc878f769146e8e": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "ccc53e61d566493bbbfdab1d70c474ff": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_2288d4e2329745c4a9ed85aa78115c1a", "IPY_MODEL_1a9ea2c698c64795996e4b6c76b907c5", "IPY_MODEL_5f7c6dc355bb4a39a3b34ac9fd2eebea"], "layout": "IPY_MODEL_b139dd67c55a41b38dc878f769146e8e"}}}, "version_major": 2, "version_minor": 0}
+{"state": {"71f42c82d26d4a20ad0eaa5776de6270": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "0a27883ca96545b3b256636addebffd1": {"model_name": "ProgressStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "ProgressStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "bar_color": null, "description_width": ""}}, "f9c42c45758e4fe68760c48102380787": {"model_name": "FloatProgressModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatProgressModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "ProgressView", "bar_style": "success", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_71f42c82d26d4a20ad0eaa5776de6270", "max": 60.0, "min": 0.0, "orientation": "horizontal", "style": "IPY_MODEL_0a27883ca96545b3b256636addebffd1", "value": 60.0}}, "7f892d125600465daf97bafacf7c464c": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "d0bdc38927f04b449d64dd9749f8a90c": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "bbe83b3d30d64bd7b13f87f0ca2d598f": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HTMLView", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_7f892d125600465daf97bafacf7c464c", "placeholder": "\u200b", "style": "IPY_MODEL_d0bdc38927f04b449d64dd9749f8a90c", "value": "Pandas Apply: 100%"}}, "2488db404334447dad523a7a573ed3ff": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "381aaf94565c4107ace23ff245dada1b": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "544299435aa54c54b4cfc146851d1f97": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HTMLView", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_2488db404334447dad523a7a573ed3ff", "placeholder": "\u200b", "style": "IPY_MODEL_381aaf94565c4107ace23ff245dada1b", "value": " 60/60 [00:00&lt;00:00, 1999.24it/s]"}}, "73199258948442478b17ab2caf4a7762": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "9aca7cde62ca48b39ecb4f725a06fefb": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_bbe83b3d30d64bd7b13f87f0ca2d598f", "IPY_MODEL_f9c42c45758e4fe68760c48102380787", "IPY_MODEL_544299435aa54c54b4cfc146851d1f97"], "layout": "IPY_MODEL_73199258948442478b17ab2caf4a7762"}}}, "version_major": 2, "version_minor": 0}
 </script>
 
 
@@ -7931,6 +8459,20 @@ Length: 272, dtype: float64
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Pengertian Web Mining</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="markdown.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Markdown Files</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>
